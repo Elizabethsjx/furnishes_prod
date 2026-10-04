@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CommercialLanding } from "@/features/landing/CommercialLanding";
 import { LandingEntry } from "@/features/landing/LandingEntry";
 import {
   firstSearchParam,
@@ -11,8 +12,9 @@ import { getOptionalCurrentSession } from "@/server/auth/session";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: PUBLIC_PAGE_SEO.home.title,
-  description: PUBLIC_PAGE_SEO.home.description,
+  title: "Furnishes | Furniture Sourcing & Spatial Planning",
+  description:
+    "Furniture sourcing and spatial planning for homes and workplaces. Explore supplier options, build your shortlist, and plan your space with Furnishes.",
   path: PUBLIC_PAGE_SEO.home.path,
   absoluteTitle: true,
 });
@@ -21,6 +23,7 @@ export default async function HomePage({
   searchParams,
 }: {
   searchParams: Promise<{
+    experience?: string | string[];
     intro?: string | string[];
     e2e?: string | string[];
   }>;
@@ -32,6 +35,9 @@ export default async function HomePage({
     null;
 
   const params = await searchParams;
+  if (firstSearchParam(params.experience) !== "original") {
+    return <CommercialLanding userLabel={userLabel} />;
+  }
   const introQuery = firstSearchParam(params.intro);
   const skipFromQuery = shouldSkipLandingLoader({ introQuery });
   const e2eMode =
