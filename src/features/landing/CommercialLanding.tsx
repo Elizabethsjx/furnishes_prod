@@ -1,6 +1,9 @@
 "use client";
 
 import { useLayoutEffect } from "react";
+import { SelectionStudio } from "./SelectionStudio";
+import { CozyRoom } from "./CozyRoom";
+import { WorkflowExplainer } from "./WorkflowExplainer";
 import { clearLandingFreezePaint } from "./landing-freeze";
 import s from "./commercial.module.css";
 
@@ -55,7 +58,8 @@ export function CommercialLanding({
         </a>
         <nav aria-label="Main navigation">
           <a href="/#approach">How it works</a>
-          <a href="/#spaces">Who we help</a>
+          <a href="/#selection">Furniture selection</a>
+          <a href="/#spaces">For professionals</a>
           <a href={caseUrl}>Our work</a>
         </nav>
         <div className={s.headerActions}>
@@ -231,105 +235,137 @@ export function CommercialLanding({
             <section className={`${s.section} ${s.hero}`}>
               <div className={s.heroCopy}>
                 <p className={s.eyebrow}>
-                  <span className={s.dot} /> FURNITURE SOURCING & SPATIAL
+                  <span className={s.dot} /> FURNITURE SOURCING · SPATIAL
                   PLANNING
                 </p>
                 <h1>
-                  Your space.
+                  Furniture, considered.
                   <br />
-                  Your needs.
+                  Your space,
                   <br />
-                  <em>Better considered.</em>
+                  <em>resolved.</em>
                 </h1>
                 <p className={s.lead}>
-                  Find furniture that fits your brief. Explore supplier options,
-                  build a considered shortlist, and see the possibilities in
-                  your space.
+                  From the first brief to a priced shortlist and spatial
+                  proposal. Make furniture decisions with the details, options
+                  and context in one place.
                 </p>
                 <div className={s.actions}>
                   <a className={s.button} href="/contact">
-                    Tell us about your project <span aria-hidden="true">↗</span>
+                    Discuss your project <span aria-hidden="true">↗</span>
                   </a>
                   <a className={s.textLink} href={caseUrl}>
                     Explore a real project <span aria-hidden="true">→</span>
                   </a>
                 </div>
                 <p className={s.heroFoot}>
-                  For homes, workplaces and the people furnishing them.
+                  RESIDENTIAL · WORKPLACES · DESIGN & SUPPLY PARTNERS
                 </p>
               </div>
-              <div className={s.heroVisual}>
-                <div className={s.visualTop}>
-                  <span>FROM BRIEF TO SPACE</span>
-                  <span>01 / RESIDENTIAL</span>
-                </div>
-                <img
-                  src="/cases/bto-family/space-reference.png"
-                  alt="Planning visualisation of a Singapore family apartment"
-                  fetchPriority="high"
-                />
-                <div className={s.visualBottom}>
-                  <div>
-                    <span className={s.eyebrow}>A PROJECT IN FOCUS</span>
-                    <strong>A home, before the keys.</strong>
-                    <small>Singapore BTO · Planning reference</small>
-                  </div>
-                  <a href={caseUrl} aria-label="View the BTO family case study">
-                    ↗
-                  </a>
-                </div>
-              </div>
+              <CozyRoom />
             </section>
             <div className={s.serviceStrip}>
-              <span>ONE CONNECTED PROCESS</span>
-              <p>Understand your brief</p>
+              <span>[ FOUR CONCRETE STEPS ]</span>
+              <p>Share your requirements</p>
               <i aria-hidden="true">→</i>
-              <p>Source & shortlist</p>
+              <p>Get a priced furniture list</p>
               <i aria-hidden="true">→</i>
-              <p>Visualise & refine</p>
+              <p>Turn the plan into 3D</p>
+              <i aria-hidden="true">→</i>
+              <p>Place furniture &amp; review prices</p>
             </div>
+            <section
+              className={`${s.section} ${s.workflowSection}`}
+              id="walkthrough"
+            >
+              <div>
+                <p className={s.eyebrow}>THE PROJECT WORKFLOW</p>
+                <h2>
+                  Define the brief.
+                  <br />
+                  Review the selection.
+                  <br />
+                  <em>Plan the space.</em>
+                </h2>
+                <p className={s.lead}>
+                  Send us the things you love and the space you have. We bring
+                  the options, the prices and the layout together — so you can
+                  decide with a little more confidence.
+                </p>
+                <a className={s.textLink} href={caseUrl}>
+                  View the planning case <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <WorkflowExplainer />
+            </section>
             <section className={`${s.section} ${s.approach}`} id="approach">
               <div className={s.sectionHeading}>
                 <div>
-                  <p className={s.eyebrow}>LESS SEARCHING. MORE CLARITY.</p>
+                  <p className={s.eyebrow}>[ WHAT WE DO / WHAT YOU RECEIVE ]</p>
                   <h2>
-                    From an idea
+                    From your wish list
                     <br />
-                    to a considered plan.
+                    to your furniture plan.
                   </h2>
                 </div>
                 <p>
-                  A practical way to connect what you need, what suppliers
-                  offer, and how it could work in your space.
+                  Four steps from your requirements to a furniture selection you
+                  can review in context.
                 </p>
               </div>
-              <div className={s.steps}>
+              <div className={`${s.steps} ${s.serviceSteps}`}>
                 <article>
-                  <span>01 / UNDERSTAND</span>
-                  <h3>Start with your space.</h3>
+                  <span>01 / REQUIREMENTS</span>
+                  <h3>Collect your furniture requirements</h3>
                   <p>
-                    Share your needs, budget, inspiration and floor plan. We
-                    help turn them into a clear furniture brief.
+                    Tell us who uses the space, your budget, preferred styles
+                    and storage needs. Share reference images and a floor plan.
                   </p>
+                  <strong className={s.deliverable}>
+                    You receive: a structured furniture brief.
+                  </strong>
                 </article>
                 <article>
-                  <span>02 / SOURCE</span>
-                  <h3>Find the right options.</h3>
+                  <span>02 / SOURCING & PRICES</span>
+                  <h3>Build a priced furniture list</h3>
                   <p>
-                    Explore supplier options and compare styles, dimensions and
-                    quoted costs in an organised shortlist.
+                    We source supplier options and organise product images,
+                    dimensions, finishes and quoted prices so you can compare
+                    your choices.
                   </p>
+                  <strong className={s.deliverable}>
+                    You receive: a shortlist with specifications and reference
+                    quotes.
+                  </strong>
                 </article>
                 <article>
-                  <span>03 / VISUALISE</span>
-                  <h3>Bring the plan into view.</h3>
+                  <span>03 / FLOOR PLAN TO SPACE</span>
+                  <h3>Prepare a 3D spatial proposal</h3>
                   <p>
-                    Use spatial planning references to discuss layouts and
-                    refine choices before moving forward.
+                    We use your 2D floor plan as a reference for a 3D planning
+                    proposal, helping you discuss room proportions and layout
+                    before committing.
                   </p>
+                  <strong className={s.deliverable}>
+                    You receive: a visual layout for review.
+                  </strong>
+                </article>
+                <article>
+                  <span>04 / FURNITURE & LAYOUT</span>
+                  <h3>Review furniture in the space</h3>
+                  <p>
+                    Discuss placement and alternative arrangements alongside
+                    your furniture list and prices. Available models may
+                    represent, rather than exactly match, selected products.
+                  </p>
+                  <strong className={s.deliverable}>
+                    You receive: a layout reference and a shortlist to refine
+                    before purchasing.
+                  </strong>
                 </article>
               </div>
             </section>
+            <SelectionStudio />
             <section className={s.caseBand}>
               <div className={`${s.section} ${s.featured}`}>
                 <div className={s.featuredImage}>
@@ -368,10 +404,8 @@ export function CommercialLanding({
             <section className={`${s.section} ${s.spaces}`} id="spaces">
               <div className={s.sectionHeading}>
                 <div>
-                  <p className={s.eyebrow}>
-                    DIFFERENT SPACES. A SHARED APPROACH.
-                  </p>
-                  <h2>Built around your brief.</h2>
+                  <p className={s.eyebrow}>[ WHO WE WORK WITH ]</p>
+                  <h2>Homes, offices & sourcing partners.</h2>
                 </div>
                 <p>
                   From a family's first home to a team’s next workspace, the
@@ -416,16 +450,65 @@ export function CommercialLanding({
             </section>
           </>
         )}
+        {!caseStudy && (
+          <section className={`${s.section} ${s.faq}`}>
+            <div>
+              <p className={s.eyebrow}>BEFORE YOU START</p>
+              <h2>Project essentials.</h2>
+              <p>
+                Understand the scope, the information we need and what the
+                planning references represent.
+              </p>
+            </div>
+            <div>
+              <details>
+                <summary>What should I prepare for a project?</summary>
+                <p>
+                  Bring a floor plan if available, reference images, the
+                  furniture you need, your budget and target timing. We can
+                  discuss the brief before you have all of these ready.
+                </p>
+              </details>
+              <details>
+                <summary>Are the displayed furniture prices final?</summary>
+                <p>
+                  No. The sample selections show prices recorded in a client
+                  shortlist. Current availability, quantities, shipping, tax,
+                  installation and final specifications require confirmation.
+                </p>
+              </details>
+              <details>
+                <summary>Do the 3D models show the exact products?</summary>
+                <p>
+                  The public examples are illustrative planning models.
+                  Available geometry may represent the selected furniture rather
+                  than reproduce an exact supplier model. Confirm dimensions and
+                  model availability during the project.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  Can I discuss an office or supplier collaboration?
+                </summary>
+                <p>
+                  Yes. Use the project contact page to share workplace
+                  requirements or your product range. We can then discuss an
+                  appropriate sourcing and planning scope.
+                </p>
+              </details>
+            </div>
+          </section>
+        )}
         <section className={s.cta}>
           <div className={s.section}>
             <p className={s.eyebrow}>LET'S START WITH YOUR SPACE</p>
             <h2>
-              A clearer path to
+              A better-informed brief.
               <br />
-              <em>furnishing it well.</em>
+              <em>A considered result.</em>
             </h2>
             <a className={s.lightButton} href="/contact">
-              Start a conversation <span aria-hidden="true">↗</span>
+              Discuss a project <span aria-hidden="true">↗</span>
             </a>
             <p>Bring a floor plan, a wish list, or simply an idea.</p>
           </div>

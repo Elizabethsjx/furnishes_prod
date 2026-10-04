@@ -1,0 +1,246 @@
+.world {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+  height: 610px;
+}
+.sun {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(#ffd19a, #f29d6c);
+  opacity: 0.7;
+  z-index: -1;
+  box-shadow: 0 0 100px 50px #ffd29e50;
+}
+.orbit {
+  position: absolute;
+  width: 90%;
+  height: 145px;
+  border: 1px dashed #c891613b;
+  border-radius: 50%;
+  bottom: 99px;
+  left: 5%;
+  transform: rotate(-7deg);
+  z-index: -1;
+}
+.canvas {
+  position: absolute;
+  inset: 30px -35px 80px;
+}
+.canvas canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+.sceneLabel {
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  z-index: 1;
+  pointer-events: none;
+}
+.sceneLabel > span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #aa6745;
+}
+.sceneLabel small {
+  display: block;
+  font-size: 11px;
+  color: #a16e55;
+  margin-top: 6px;
+}
+.roomNote {
+  position: absolute;
+  right: 10px;
+  bottom: 155px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 19px;
+  border: 1px solid #fff7e6;
+  background: #fff8e7e8;
+  box-shadow: 0 10px 25px #b75a2010;
+  border-radius: 18px;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+.roomNote > span {
+  font-size: 33px;
+  color: #cd7445;
+}
+.roomNote div {
+  font-size: 15px;
+  font-weight: 600;
+}
+.roomNote small {
+  display: block;
+  font-size: 10px;
+  color: #9a745b;
+  font-weight: 400;
+}
+.controls {
+  position: absolute;
+  bottom: 32px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.controlLabel {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #a47556;
+}
+.swatches {
+  display: flex;
+  gap: 13px;
+  margin-top: 10px;
+}
+.swatches button {
+  background: transparent;
+  border: 0;
+  padding: 3px;
+  color: #895b41;
+  font: inherit;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.swatches button > span {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 3px solid #fff7ec;
+  box-shadow: 0 0 0 1px #d9b99a;
+}
+.swatches button[aria-pressed="true"] > span {
+  box-shadow: 0 0 0 2px #a3613d;
+}
+.motion {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #fff6e7;
+  border: 1px solid #dec1a3;
+  color: #8e5b3b;
+  cursor: pointer;
+}
+.world button:focus-visible {
+  outline: 2px solid #ae5832;
+  outline-offset: 5px;
+}
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  font-size: 9px;
+  color: #a07a60;
+}
+.fallback {
+  position: absolute;
+  inset: 90px 20px 140px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.fallback img {
+  max-height: 300px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.fallback p {
+  font-size: 12px;
+  color: #916648;
+}
+@media (max-width: 700px) {
+  .world {
+    height: 490px;
+  }
+  .canvas {
+    inset: 10px -20px 80px;
+  }
+  .sun {
+    width: 270px;
+    height: 270px;
+    top: 50px;
+  }
+  .sceneLabel {
+    left: 5px;
+    top: 8px;
+  }
+  .roomNote {
+    right: 0;
+    bottom: 135px;
+    padding: 10px 13px;
+  }
+  .controls {
+    left: 5px;
+    right: 5px;
+  }
+  .disclaimer {
+    left: 5px;
+    font-size: 8px;
+  }
+  .roomNote div {
+    font-size: 13px;
+  }
+  .swatches {
+    gap: 10px;
+  }
+}
+
+/* Professional presentation, retaining the warm scene palette. */
+.sun {
+  opacity: 0.32;
+  border-radius: 0;
+  width: 82%;
+  height: 75%;
+  top: 48px;
+  background: linear-gradient(140deg, #f5d6b0, #f9e9d1);
+  box-shadow: none;
+}
+.orbit {
+  display: none;
+}
+.roomNote {
+  border-radius: 2px;
+  transform: none;
+  border: 1px solid #dbc1a3;
+  box-shadow: none;
+  padding: 13px 17px;
+  right: 8px;
+  bottom: 135px;
+}
+.roomNote > span {
+  font-size: 22px;
+}
+.roomNote div {
+  font-size: 12px;
+  font-weight: 500;
+}
+.sceneLabel small {
+  font-size: 11px;
+}
+.controls {
+  border-top: 1px solid #d9bea059;
+  padding-top: 13px;
+}
+.motion {
+  border-radius: 3px;
+}
+.sceneLabel > span,
+.controlLabel {
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}

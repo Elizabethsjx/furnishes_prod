@@ -1,0 +1,473 @@
+.explainer {
+  background: #fff7ed;
+  border: 1px solid #efc5aa;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px #6b2c1209;
+  color: #512611;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #efcfba;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+}
+.stage {
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffe6cd, #fff8ee);
+}
+.scene {
+  height: 100%;
+  padding: 20px 25px;
+  animation: arrive 0.6s ease both;
+}
+.sheetLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #8e5136;
+}
+.brief,
+.shortlist {
+  max-width: 470px;
+  margin: auto;
+}
+.message {
+  background: #e83200;
+  color: #fff7ed;
+  padding: 17px 19px;
+  margin: 16px 0;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.briefRow {
+  display: flex;
+  gap: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid #efcfba;
+  font-size: 12px;
+}
+.briefRow > span {
+  font-size: 9px;
+  letter-spacing: 0.7px;
+  min-width: 65px;
+  color: #955b3f;
+}
+.briefRow strong {
+  font-weight: 500;
+}
+.attached {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 12px;
+}
+.attached img {
+  width: 47px !important;
+  height: 43px;
+  object-fit: contain;
+  background: white;
+}
+.attached strong,
+.attached small {
+  display: block;
+}
+.attached small {
+  font-size: 10px;
+  color: #996b51;
+}
+.attached > span {
+  margin-left: auto;
+  color: #e83200;
+}
+.outcome {
+  font-size: 10px;
+  color: #975c3e;
+  margin-top: 14px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edc9b0;
+}
+.item > img {
+  width: 59px !important;
+  height: 64px;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 2px;
+}
+.item strong,
+.item small {
+  display: block;
+}
+.item strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.item small {
+  font-size: 10px;
+  color: #8d6148;
+}
+.item b {
+  margin-left: auto;
+  font-size: 14px;
+  color: #d3320d;
+  white-space: nowrap;
+}
+.item:first-of-type b {
+  font-size: 11px;
+}
+.conversion {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20px 1.2fr;
+  gap: 3px;
+}
+.conversion figure {
+  margin: 0;
+  position: relative;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conversion figure > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  background: #fff7ede8;
+  padding: 3px 7px;
+  z-index: 1;
+}
+.conversion img {
+  width: 90% !important;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.conversion .plan {
+  width: 55% !important;
+}
+.arrow {
+  text-align: center;
+  color: #e83200;
+  line-height: 20px;
+  font-size: 24px;
+}
+.placement {
+  height: 100%;
+  position: relative;
+}
+.room {
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.target {
+  position: absolute;
+  left: 68%;
+  top: 61%;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #e83200;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #e83200;
+  box-shadow: 0 0 0 9px #e8320020;
+  animation: targetIn 0.8s ease both;
+}
+.target span {
+  font-size: 22px;
+}
+.placedCard {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  background: #fffaf3;
+  box-shadow: 0 8px 24px #77311220;
+  border: 1px solid #efb18c;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: placeIn 1.6s ease both;
+}
+.placedCard > img {
+  width: 62px !important;
+  height: 74px;
+  object-fit: cover;
+}
+.placedCard strong,
+.placedCard small,
+.placedCard b {
+  display: block;
+}
+.placedCard small {
+  font-size: 8px;
+  letter-spacing: 0.6px;
+}
+.placedCard strong {
+  font-size: 13px;
+}
+.placedCard b {
+  color: #e83200;
+  font-size: 17px;
+}
+.placedCard b span {
+  font-size: 9px;
+  font-weight: 400;
+}
+.placementNote {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff8eeed;
+  padding: 8px 10px;
+  font-size: 9px;
+  color: #966042;
+}
+.caption {
+  min-height: 103px;
+  padding: 16px 22px;
+  background: #fff7ed;
+  border-top: 1px solid #efcfba;
+}
+.caption h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.6px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  margin: 0 0 7px !important;
+}
+.caption p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #8a5b42;
+  margin: 0;
+}
+.controls {
+  border-top: 1px solid #efcfba;
+  display: flex;
+  align-items: stretch;
+}
+.stepButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1;
+}
+.stepButtons button,
+.play {
+  border: 0;
+  background: transparent;
+  color: #80543a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+  padding: 12px 6px;
+  text-align: left;
+  line-height: 1.35;
+}
+.stepButtons button span {
+  display: block;
+  font-size: 10px;
+  font-family: var(--font-space-mono), monospace;
+  margin-bottom: 4px;
+}
+.stepButtons button {
+  border-top: 3px solid transparent;
+}
+.stepButtons button[aria-pressed="true"] {
+  border-top-color: #e83200;
+  background: #ffe8d3;
+  color: #b12b09;
+}
+.stepButtons button:hover,
+.play:hover {
+  background: #ffe8d3;
+}
+.play {
+  padding: 12px;
+  border-left: 1px solid #efcfba;
+  white-space: nowrap;
+  min-width: 62px;
+}
+.explainer button:focus-visible {
+  outline: 2px solid #e83200;
+  outline-offset: -3px;
+}
+.disclosure {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #93634a;
+  padding: 10px 18px;
+  background: #fff2e5;
+  border-top: 1px solid #efcfba;
+  margin: 0;
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes placeIn {
+  from {
+    opacity: 0;
+    transform: translate(-30px, 25px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes targetIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene,
+  .placedCard,
+  .target {
+    animation: none;
+  }
+}
+@media (max-width: 700px) {
+  .scene {
+    padding: 18px 16px;
+  }
+  .message {
+    font-size: 18px;
+  }
+  .stage {
+    height: 330px;
+  }
+  .top {
+    padding: 15px;
+    font-size: 8px;
+  }
+  .caption {
+    padding: 15px;
+    min-height: 110px;
+  }
+  .stepButtons button {
+    font-size: 8px;
+  }
+  .play {
+    padding: 8px;
+    min-width: 50px;
+  }
+  .sheetLabel {
+    font-size: 8px;
+  }
+  .item strong {
+    font-size: 11px;
+  }
+  .item b {
+    font-size: 12px;
+  }
+  .item {
+    gap: 9px;
+  }
+  .item > img {
+    width: 49px !important;
+  }
+  .briefRow strong {
+    font-size: 11px;
+  }
+  .placedCard {
+    top: 30px;
+    padding: 7px;
+  }
+  .placedCard > img {
+    width: 48px !important;
+    height: 58px;
+  }
+}
+
+.explainer {
+  border-radius: 24px;
+  border-color: #edd5b9;
+  background: #fffaf2;
+  box-shadow: 0 12px 35px #b3793610;
+}
+.message {
+  background: #c57e4c;
+  border-radius: 14px;
+}
+.stage {
+  background: linear-gradient(130deg, #f9e7ce, #fff6e7);
+}
+.top,
+.caption,
+.controls,
+.disclosure {
+  border-color: #ebd8bd;
+}
+.top {
+  background: #fff8ea;
+}
+.caption,
+.disclosure {
+  background: #fff8ea;
+}
+.caption h2 {
+  font-family: "Trebuchet MS", sans-serif !important;
+  font-size: 20px !important;
+}
+.stepButtons button[aria-pressed="true"] {
+  border-top-color: #bd764b;
+  background: #fae7ce;
+  color: #965832;
+}
+.item b,
+.placedCard b,
+.arrow {
+  color: #b6683d;
+}
+.target {
+  border-color: #c9814b;
+  color: #c9814b;
+  box-shadow: 0 0 0 9px #c9814b20;
+}
+
+.explainer {
+  border-radius: 3px;
+  box-shadow: none;
+}
+.message {
+  border-radius: 3px;
+  font-weight: 400;
+}
+.caption h2 {
+  font-family: var(--font-archivo), Arial, sans-serif !important;
+  font-weight: 500 !important;
+}
+.placedCard {
+  box-shadow: 0 4px 10px #77311212;
+}
