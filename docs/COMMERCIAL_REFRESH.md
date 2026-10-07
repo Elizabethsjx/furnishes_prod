@@ -27,3 +27,11 @@ Replaced the playful rounded typography with Archivo, restrained heading weights
 Added a sample selection studio with category filters, add/remove controls, specification comparison, known-reference-price subtotal and a downloadable text shortlist. It uses only the three supplied case references and is explicitly not a live catalogue or order. Unconfirmed bed prices are excluded from totals; quantities and landed cost are not inferred. Added project scope FAQs and clearer professional audience sections.
 
 Validation: 18 focused Playwright checks passed, covering homepage/case/mobile, selection and download, animation controls/fallback, planner and existing public/auth/health routes. Desktop/mobile visual review confirmed product images load. No production deployment performed.
+
+## Cultural scroll narrative (October 2026)
+
+The default homepage now introduces modular design through a native-scroll SVG story: outline, structure, function and rearrangement. This is explicitly a concept study, not a verified product configuration. Warm paper, sage, timber tones, serif headings and small Chinese captions connect a Chinese structural design reference with Singapore apartment life. No third-party reference-site artwork or article text is copied.
+
+The anonymous BTO case remains at `/projects/bto-family`, with all existing brief, shortlist, planning limitations and delivery status preserved. A shared scroll journey reveals the source floor plan and generated spatial reference. These are different representations, not a geometrically matched 2D-to-3D conversion. No fabricated quotation, customer decision or completed installation is introduced. The existing sample selection, comparison and download tool remains on the homepage.
+
+Native scroll, keyboard chapter controls, reduced-motion static illustrations, responsive layouts and SSR-readable story text are included. No new dependencies. Previous commercial homepage: `/?experience=commercial`; original experience: `/?experience=original`.

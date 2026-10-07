@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 
-test("new homepage has direct navigation without a WebGL loader", async ({
+test("previous commercial homepage has direct navigation without a WebGL loader", async ({
   page,
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Furniture, considered.",
   );
@@ -21,7 +21,7 @@ test("new homepage has direct navigation without a WebGL loader", async ({
 test("anonymous case has delivery status, loaded assets and a planning example", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await page.getByRole("link", { name: "View the case study" }).click();
   await expect(page).toHaveURL(/projects\/bto-family$/);
   await expect(
@@ -63,7 +63,7 @@ test("mobile home and case do not overflow and retain navigation", async ({
 test("return from login clears legacy freeze and transition overlays", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await page.evaluate(() => {
     sessionStorage.setItem("furnishes-landing-intro-seen", "1");
     sessionStorage.setItem(
@@ -78,7 +78,7 @@ test("return from login clears legacy freeze and transition overlays", async ({
     .first()
     .click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Furniture, considered.",
+    "A home that",
   );
   await expect(page.locator("#furnishes-landing-freeze-style")).toHaveCount(0);
   await expect(page.locator('[data-route-handoff="on"]')).toHaveCount(0);
@@ -109,7 +109,7 @@ test("prepared planner opens and its room-view controls work", async ({
 test("explainer supports step selection, prices and playback controls", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await page.getByRole("button", { name: "Pause explanation" }).click();
   await page.getByRole("button", { name: "02 Furniture list" }).click();
   await expect(page.getByTestId("workflow-scene")).toHaveAttribute(
@@ -141,7 +141,7 @@ test("reduced motion keeps the explainer paused until requested", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await expect(
     page.getByRole("button", { name: "Play explanation" }),
   ).toBeVisible();
@@ -156,7 +156,7 @@ test("reduced motion keeps the explainer paused until requested", async ({
 test("cozy room renders and supports colour choice and pausing", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await expect(page.locator('[data-cozy-ready="true"] canvas')).toBeVisible();
   await page.getByRole("button", { name: "Sage sofa colour" }).click();
   await expect(
@@ -179,7 +179,7 @@ test("cozy room has a static fallback without WebGL", async ({ page }) => {
       return original.apply(this, args);
     } as typeof original;
   });
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await expect(
     page.getByText("Your next space, imagined with care."),
   ).toBeVisible();
@@ -191,7 +191,7 @@ test("cozy room has a static fallback without WebGL", async ({ page }) => {
 test("sample shortlist filters, compares and exports reference prices", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await page
     .getByRole("button", { name: "Add Individual study desk", exact: true })
     .click();
@@ -232,7 +232,7 @@ test("sample shortlist filters, compares and exports reference prices", async ({
 });
 
 test("project FAQ reveals scope details", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?experience=commercial");
   await page
     .getByText("Are the displayed furniture prices final?", { exact: true })
     .click();

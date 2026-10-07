@@ -1,5 +1,6 @@
 "use client";
 
+import { CaseJourney } from "./ScrollStories";
 import { useLayoutEffect } from "react";
 import { SelectionStudio } from "./SelectionStudio";
 import { CozyRoom } from "./CozyRoom";
@@ -98,16 +99,7 @@ export function CommercialLanding({
                 delivered. Furniture has not yet arrived.
               </div>
             </section>
-            <figure className={`${s.section} ${s.caseImage}`}>
-              <img
-                src="/cases/bto-family/space-reference.png"
-                alt="Generated planning reference showing the family apartment layout"
-              />
-              <figcaption>
-                Generated planning reference — not a completed interior or an
-                exact product visualisation.
-              </figcaption>
-            </figure>
+            <CaseJourney />
             <section className={`${s.section} ${s.storyGrid}`}>
               <div>
                 <p className={s.eyebrow}>01 / THE BRIEF</p>

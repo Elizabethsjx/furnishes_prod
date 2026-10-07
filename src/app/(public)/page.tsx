@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HeritageLanding } from "@/features/landing/HeritageLanding";
 import { CommercialLanding } from "@/features/landing/CommercialLanding";
 import { LandingEntry } from "@/features/landing/LandingEntry";
 import {
@@ -12,9 +13,9 @@ import { getOptionalCurrentSession } from "@/server/auth/session";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Furnishes | Furniture Sourcing & Spatial Planning",
+  title: "Furnishes | Furniture, Space & Everyday Life",
   description:
-    "Furniture sourcing and spatial planning for homes and workplaces. Explore supplier options, build your shortlist, and plan your space with Furnishes.",
+    "Modular furniture ideas and thoughtful spatial planning. Explore how Furnishes helps make room for everyday life, with a real Singapore BTO family planning case.",
   path: PUBLIC_PAGE_SEO.home.path,
   absoluteTitle: true,
 });
@@ -36,7 +37,11 @@ export default async function HomePage({
 
   const params = await searchParams;
   if (firstSearchParam(params.experience) !== "original") {
-    return <CommercialLanding userLabel={userLabel} />;
+    return firstSearchParam(params.experience) === "commercial" ? (
+      <CommercialLanding userLabel={userLabel} />
+    ) : (
+      <HeritageLanding userLabel={userLabel} />
+    );
   }
   const introQuery = firstSearchParam(params.intro);
   const skipFromQuery = shouldSkipLandingLoader({ introQuery });
