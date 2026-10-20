@@ -293,32 +293,52 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 11px;
+  padding: 6px 8px;
   border-radius: 999px;
   appearance: none;
   border: 0;
-  background: #fff;
+  background: transparent;
   color: var(--landing-ink);
   cursor: pointer;
   pointer-events: auto;
   white-space: nowrap;
   user-select: none;
   font-family: var(--landing-font-mono);
-  font-weight: 600;
-  font-size: 11px;
+  font-weight: 500;
+  font-size: 9px;
   line-height: 1;
-  letter-spacing: 0.13em;
-  box-shadow: 0 5px 16px rgba(120, 40, 20, 0.22);
+  letter-spacing: 0.16em;
+  opacity: 0.72;
+  text-shadow:
+    0 1px 0 var(--paper-2, #f8e8d3),
+    0 0 7px var(--paper-2, #f8e8d3);
   transition:
-    opacity 0.25s,
-    box-shadow 0.15s;
+    opacity 0.2s,
+    background-color 0.2s;
+}
+
+@media (hover: hover) {
+  .roomPill:hover {
+    opacity: 1;
+    background: color-mix(
+      in srgb,
+      var(--accent-soft, #f8ddbe) 82%,
+      transparent
+    );
+  }
+}
+
+.roomPill[aria-pressed="true"] {
+  opacity: 1;
+  background: color-mix(in srgb, var(--accent-soft, #f8ddbe) 96%, transparent);
 }
 
 .roomPillDot {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border-radius: 999px;
-  background: #ff5f33;
+  background: var(--accent-deep, #7e5738);
+  opacity: 0.75;
 }
 
 .heroOverview {
@@ -331,8 +351,8 @@
   padding: 8px 16px;
   border-radius: 999px;
   cursor: pointer;
-  border: 1px solid rgba(200, 90, 50, 0.32);
-  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgb(106 81 54 / 0.26);
+  background: rgb(253 251 246 / 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--landing-ink);
@@ -363,8 +383,8 @@
   padding: 9px 20px;
   border-radius: 999px;
   cursor: pointer;
-  border: 1px solid rgba(200, 90, 50, 0.32);
-  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgb(106 81 54 / 0.26);
+  background: rgb(253 251 246 / 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--landing-ink);
@@ -390,7 +410,7 @@
 
 .heroPauseIcon {
   display: inline-flex;
-  color: #c95e2d;
+  color: var(--accent-deep, #7e5738);
 }
 
 .waitlistButton {

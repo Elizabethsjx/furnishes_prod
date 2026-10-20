@@ -15,15 +15,15 @@ export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
       >
         <SpatialExperience />
         <div className={v.copy}>
-          <p className={s.eyebrow}>SPACE DESIGN · FURNITURE · PEOPLE</p>
+          <p className={s.eyebrow}>SPACE DESIGN · FURNITURE · 3D</p>
           <h1>
             Your space.
             <br />
             <em>Thoughtfully furnished.</em>
           </h1>
           <p className={s.lead}>
-            We design your space, find furniture for your budget and bring it
-            all together in 3D.
+            We plan the space, specify the furniture and bring it together in
+            3D.
           </p>
           <div className={s.actions}>
             <a className={s.button} href="/contact?type=commercial">
@@ -41,10 +41,8 @@ export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
             </a>
           </div>
           <p className={v.copyNote}>
-            WORKPLACES & SHARED SPACES · HOMES
-            <br />
-            3D workspace requires sign-in ·{" "}
-            <a href="/workspace">See how it works ↗</a>
+            WORKPLACES &amp; SHARED SPACES · HOMES — 3D WORKSPACE SIGN-IN
+            REQUIRED · <a href="/workspace">How it works ↗</a>
           </p>
         </div>
       </section>

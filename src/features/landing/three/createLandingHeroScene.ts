@@ -16,18 +16,18 @@ export type { LandingHeroSceneHandle } from "./landing-scene-types";
  */
 
 const C = {
-  bone: 0xf3ede4,
-  slab: 0xe9d9c6,
-  plinth: 0xdec7ae,
-  wood: 0xe2ccb1,
-  clay: 0xc48c6a,
-  moss: 0xd8b49a,
-  ochre: 0xd3a47c,
-  stone: 0xd6b79c,
-  teal: 0xd3a47c,
-  slate: 0x98735c,
-  glass: 0xf3e9dd,
-  sage: 0xc69b7d,
+  bone: 0xe8d2b3,
+  slab: 0xd2b189,
+  plinth: 0xc29a6d,
+  wood: 0xb5885c,
+  clay: 0xe0b184,
+  moss: 0xe3c4a0,
+  ochre: 0xd7a877,
+  stone: 0xd9945a,
+  teal: 0xc98a56,
+  slate: 0x6f4a30,
+  glass: 0xf2e3cd,
+  sage: 0xddab7c,
 };
 
 type LandingHeroSceneOptions = {
@@ -72,7 +72,6 @@ type Human = {
   kneeL: THREE.Group;
   kneeR: THREE.Group;
   pv: THREE.Group;
-  emote?: THREE.Sprite;
   kind?: string;
 };
 
@@ -126,7 +125,7 @@ export function createLandingHeroScene(
   renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 0.68;
+  renderer.toneMappingExposure = 0.7;
   mount.appendChild(renderer.domElement);
   renderer.domElement.style.touchAction = "pan-y";
   renderer.domElement.style.cursor = "grab";
@@ -141,14 +140,14 @@ export function createLandingHeroScene(
     const envScene = new THREE.Scene();
     {
       const faces = [
-        0xfff4ef, 0xffede4, 0xfff8f4, 0xffe3d6, 0xfff1ea, 0xffeae0,
+        0xfbf2e4, 0xf8ecda, 0xfdf6ea, 0xf5e5d0, 0xfbf0e0, 0xf7e9d5,
       ].map(
         (c) => new THREE.MeshBasicMaterial({ color: c, side: THREE.BackSide }),
       );
       envScene.add(new THREE.Mesh(new THREE.BoxGeometry(14, 9, 14), faces));
       const kp = new THREE.Mesh(
         new THREE.PlaneGeometry(7, 7),
-        new THREE.MeshBasicMaterial({ color: 0xfffaf6 }),
+        new THREE.MeshBasicMaterial({ color: 0xfdf7ee }),
       );
       kp.position.set(3.5, 4.4, 2.5);
       kp.rotation.x = Math.PI / 2;
@@ -196,7 +195,7 @@ export function createLandingHeroScene(
       }
       ctx.putImageData(im, 0, 0);
       ctx.globalAlpha = 0.12;
-      ctx.strokeStyle = "#f0cdbe";
+      ctx.strokeStyle = "#e2d3c1";
       for (let x = 0.5; x < s; x += 3) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -215,11 +214,11 @@ export function createLandingHeroScene(
   const texPlaster = tex(
     256,
     (ctx, s) => {
-      ctx.fillStyle = "#fff4ef";
+      ctx.fillStyle = "#fbf6ee";
       ctx.fillRect(0, 0, s, s);
       for (let k = 0; k < 4200; k++) {
         const v = 198 + Math.random() * 48;
-        ctx.fillStyle = `rgba(${v},${(v - 7) | 0},${(v - 16) | 0},0.16)`;
+        ctx.fillStyle = `rgba(${v},${(v - 4) | 0},${(v - 10) | 0},0.16)`;
         ctx.fillRect(Math.random() * s, Math.random() * s, 2.4, 2.4);
       }
     },
@@ -229,12 +228,12 @@ export function createLandingHeroScene(
     256,
     (ctx, s) => {
       for (let y = 0; y < s; y++) {
-        const v = 244 + 8 * Math.sin(y * 0.05) + (Math.random() - 0.5) * 10;
-        ctx.fillStyle = `rgb(${v | 0},${(v - 3) | 0},${(v - 7) | 0})`;
+        const v = 228 + 8 * Math.sin(y * 0.05) + (Math.random() - 0.5) * 10;
+        ctx.fillStyle = `rgb(${v | 0},${(v - 14) | 0},${(v - 34) | 0})`;
         ctx.fillRect(0, y, s, 1);
       }
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = "#eab8a4";
+      ctx.globalAlpha = 0.07;
+      ctx.strokeStyle = "#b08a5f";
       for (let y = 0; y < s; y += 38) {
         ctx.beginPath();
         ctx.moveTo(0, y + 0.5);
@@ -247,13 +246,13 @@ export function createLandingHeroScene(
   const texWall = tex(
     256,
     (ctx, s) => {
-      ctx.fillStyle = "#fff6f1";
+      ctx.fillStyle = "#e8d2b3";
       ctx.fillRect(0, 0, s, s);
       ctx.lineWidth = 1.5;
       ctx.lineCap = "round";
       for (let y = 3; y < s; y += 6) {
         ctx.globalAlpha = 0.05 + Math.random() * 0.05;
-        ctx.strokeStyle = "#eccab8";
+        ctx.strokeStyle = "#d2b691";
         ctx.beginPath();
         for (let x = 0; x <= s; x += 14) {
           const yy = y + Math.sin(x * 0.05 + y * 0.6) * 1.8;
@@ -265,19 +264,19 @@ export function createLandingHeroScene(
       ctx.globalAlpha = 1;
       for (let k = 0; k < 2200; k++) {
         const v = 240 + Math.random() * 14;
-        ctx.fillStyle = `rgba(${v | 0},${(v - 6) | 0},${(v - 11) | 0},0.10)`;
+        ctx.fillStyle = `rgba(${v | 0},${(v - 4) | 0},${(v - 8) | 0},0.10)`;
         ctx.fillRect(Math.random() * s, Math.random() * s, 2, 2);
       }
     },
     2,
   );
 
-  const mat = (c: number, r = 0.82) => {
+  const mat = (c: number, r = 0.72) => {
     const m = new THREE.MeshStandardMaterial({
       color: c,
       roughness: r,
       metalness: 0,
-      envMapIntensity: 0.24,
+      envMapIntensity: 0.18,
     });
     m.map = texPlaster;
     m.bumpMap = texPlaster;
@@ -300,60 +299,60 @@ export function createLandingHeroScene(
 
   const PAL = [
     {
-      wall: 0xffe8dc,
-      seat: 0xfff6f1,
-      back: 0xf23a16,
-      arm: 0xfff6f1,
-      corner: 0xfb4a21,
-      bolster: 0xe5300c,
-      lamp: 0xffd9cc,
+      wall: 0xe8d2b3,
+      seat: 0xe08a4a,
+      back: 0x94633c,
+      arm: 0xe0c8ab,
+      corner: 0xd9a068,
+      bolster: 0x6f4a30,
+      lamp: 0xffd9a8,
     },
     {
-      wall: 0xffe8dc,
-      seat: 0xfff6f1,
-      back: 0xd3a47c,
-      arm: 0xfff6f1,
-      corner: 0xff7148,
-      bolster: 0xfb4a21,
-      lamp: 0xffd9cc,
+      wall: 0xe5ccab,
+      seat: 0xeaae80,
+      back: 0x8d6039,
+      arm: 0xe0c8ab,
+      corner: 0xe08a4a,
+      bolster: 0x94633c,
+      lamp: 0xffdcb0,
     },
     {
-      wall: 0xffe8dc,
-      seat: 0xfff6f1,
-      back: 0xff7148,
-      arm: 0xfff6f1,
-      corner: 0xff8a66,
-      bolster: 0xd3a47c,
-      lamp: 0xffdccf,
+      wall: 0xecd8ba,
+      seat: 0xe0c8ab,
+      back: 0xa9764a,
+      arm: 0xe6d2b6,
+      corner: 0xd9a068,
+      bolster: 0x8d6039,
+      lamp: 0xffdfb8,
     },
     {
-      wall: 0xffe8dc,
-      seat: 0xfff6f1,
-      back: 0xff8a66,
-      arm: 0xfff6f1,
-      corner: 0xff8a66,
-      bolster: 0xff7148,
-      lamp: 0xffdfd2,
+      wall: 0xe3c9a5,
+      seat: 0xeaae80,
+      back: 0x94633c,
+      arm: 0xe0c8ab,
+      corner: 0xe08a4a,
+      bolster: 0x6f4a30,
+      lamp: 0xffdcb0,
     },
     {
-      wall: 0xffe8dc,
-      seat: 0xfff6f1,
-      back: 0xfb4a21,
-      arm: 0xfff6f1,
-      corner: 0xd3a47c,
-      bolster: 0xf23a16,
-      lamp: 0xffd9cc,
+      wall: 0xe9d3b6,
+      seat: 0xe08a4a,
+      back: 0x6f4a30,
+      arm: 0xe6d2b6,
+      corner: 0xceaa80,
+      bolster: 0x94633c,
+      lamp: 0xffdeb8,
     },
   ];
   const WALL = PAL.map((p) => mat(p.wall));
   WALL.forEach((m) => {
     m.map = texWall;
     m.bumpMap = texWall;
-    m.bumpScale = 0.05;
+    m.bumpScale = 0.02;
   });
   M.bone.map = texWall;
   M.bone.bumpMap = texWall;
-  M.bone.bumpScale = 0.05;
+  M.bone.bumpScale = 0.02;
   let wallMat: THREE.MeshStandardMaterial = M.bone;
 
   const glassMat = new THREE.MeshStandardMaterial({
@@ -735,28 +734,28 @@ export function createLandingHeroScene(
   const SEAT_H = 0.36;
   const furnMats = (p: (typeof PAL)[number]): FurnMats => {
     const m: FurnMats = {
-      seat: mat(p.seat, 0.6),
-      back: mat(p.back, 0.6),
-      arm: mat(p.arm, 0.56),
-      corner: mat(p.corner, 0.6),
-      bolster: mat(p.bolster, 0.56),
+      seat: mat(p.seat, 0.74),
+      back: mat(p.back, 0.74),
+      arm: mat(p.arm, 0.72),
+      corner: mat(p.corner, 0.74),
+      bolster: mat(p.bolster, 0.7),
     };
     Object.values(m).forEach((x) => {
       x.map = texFabric;
       x.bumpMap = texFabric;
-      x.bumpScale = 0.03;
-      x.flatShading = true;
+      x.bumpScale = 0.02;
+      x.flatShading = false;
       x.needsUpdate = true;
     });
     return m;
   };
   const P2 = Math.PI / 2;
   const TY0: Record<string, number> = {
-    seat: 0.18,
-    corner: 0.18,
+    seat: 0,
+    corner: 0,
     arm: 0.275,
-    table: 0.11,
-    cyl: 0.21,
+    table: 0,
+    cyl: 0,
     back: 0.0,
     arc: 0.0,
     hub: 0.35,
@@ -764,19 +763,59 @@ export function createLandingHeroScene(
   const NARC = 6;
   const ARC_RIN = 0.34;
   const ARC_ROUT = 1.04;
+  /** Inset plinth + loose cushion: a visible shadow gap instead of a solid block. */
+  const cushionBlock = (
+    w: number,
+    d: number,
+    top: THREE.Material,
+    base: THREE.Material,
+  ) => {
+    const g = new THREE.Group();
+    const plinth = box(w - 0.08, 0.1, d - 0.06, base);
+    plinth.position.y = 0.05;
+    g.add(plinth);
+    const cushion = box(w, 0.26, d, top);
+    cushion.position.y = 0.23;
+    g.add(cushion);
+    return g;
+  };
   function makePiece(type: string, F: FurnMats): THREE.Object3D {
-    if (type === "seat") return box(0.7, SEAT_H, 0.35, F.seat);
-    if (type === "corner") return box(0.7, SEAT_H, 0.7, F.corner);
-    if (type === "arm") return box(0.18, 0.55, 0.7, F.arm);
-    if (type === "table") return box(0.78, 0.22, 0.78, F.seat);
+    if (type === "seat") return cushionBlock(0.7, 0.35, F.seat, F.bolster);
+    if (type === "corner") return cushionBlock(0.7, 0.7, F.corner, F.bolster);
+    if (type === "arm") return box(0.16, 0.55, 0.7, F.arm);
+    if (type === "table") {
+      const g = new THREE.Group();
+      const top = box(0.78, 0.055, 0.78, F.seat);
+      top.position.y = 0.1925;
+      g.add(top);
+      for (const sx of [-1, 1]) {
+        for (const sz of [-1, 1]) {
+          const leg = box(0.04, 0.165, 0.04, F.bolster);
+          leg.position.set(sx * 0.3, 0.0825, sz * 0.3);
+          g.add(leg);
+        }
+      }
+      return g;
+    }
     if (type === "cyl") {
-      const m = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.175, 0.175, 0.42, 24),
+      const g = new THREE.Group();
+      const body = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.16, 0.175, 0.38, 24),
         F.bolster,
       );
-      m.castShadow = true;
-      m.receiveShadow = true;
-      return m;
+      body.position.y = 0.19;
+      body.castShadow = true;
+      body.receiveShadow = true;
+      g.add(body);
+      const seatTop = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.185, 0.185, 0.04, 24),
+        F.seat,
+      );
+      seatTop.position.y = 0.4;
+      seatTop.castShadow = true;
+      seatTop.receiveShadow = true;
+      g.add(seatTop);
+      return g;
     }
     if (type === "hub") {
       const m = new THREE.Mesh(
@@ -803,9 +842,9 @@ export function createLandingHeroScene(
       return m;
     }
     const g = new THREE.Group();
-    const b = box(0.7, 0.6, 0.17, F.back);
+    const b = box(0.7, 0.6, 0.16, F.back);
     b.position.set(0, 0.3, 0);
-    b.rotation.x = -0.16;
+    b.rotation.x = -0.12;
     g.add(b);
     return g;
   }
@@ -1054,13 +1093,19 @@ export function createLandingHeroScene(
     });
   })();
 
-  const introStruct = house.children.map((m) => ({
-    mesh: m,
-    baseY: m.position.y,
-    x: m.position.x,
-    z: m.position.z,
-    ri: 0,
-  }));
+  const introStruct = house.children.map((m) => {
+    m.updateWorldMatrix(true, true);
+    const bb = new THREE.Box3().setFromObject(m);
+    return {
+      mesh: m,
+      baseY: m.position.y,
+      x: m.position.x,
+      z: m.position.z,
+      ri: 0,
+      dBottom: Number.isFinite(bb.min.y) ? bb.min.y - m.position.y : 0,
+      delay: 0,
+    };
+  });
 
   type AnimPiece = {
     mesh: THREE.Object3D;
@@ -1092,7 +1137,7 @@ export function createLandingHeroScene(
       let dr = B[2] - A[2];
       while (dr > Math.PI) dr -= 2 * Math.PI;
       while (dr < -Math.PI) dr += 2 * Math.PI;
-      animPieces.push({ mesh, baseY, A, B, dr, ri, lp: i * 0.13 });
+      animPieces.push({ mesh, baseY, A, B, dr, ri, lp: i * 0.6 });
     });
   });
 
@@ -1106,10 +1151,10 @@ export function createLandingHeroScene(
   );
 
   // ── inhabitants ──────────────────────────────────────────────
-  const PCOL = [0xd3a47c, 0xfff3ee, 0xff8a66, 0xf23a16, 0xfff3ee];
-  const skin = mat(0xe0a77f, 0.8);
-  const hair = mat(0x5a3322, 0.9);
-  const pants = mat(0xc9684a, 0.9);
+  const PCOL = [0x6f4a30, 0xe08a4a, 0x94633c, 0xf0e0ca, 0xceaa80];
+  const skin = mat(0xd9ae8c, 0.8);
+  const hair = mat(0x4a3a2a, 0.9);
+  const pants = mat(0x7d6a52, 0.9);
   const segMesh = (
     w: number,
     h: number,
@@ -1199,121 +1244,6 @@ export function createLandingHeroScene(
     }
   };
 
-  const rrect = (
-    x: CanvasRenderingContext2D,
-    a: number,
-    b: number,
-    w: number,
-    h: number,
-    r: number,
-  ) => {
-    x.beginPath();
-    x.moveTo(a + r, b);
-    x.arcTo(a + w, b, a + w, b + h, r);
-    x.arcTo(a + w, b + h, a, b + h, r);
-    x.arcTo(a, b + h, a, b, r);
-    x.arcTo(a, b, a + w, b, r);
-    x.closePath();
-  };
-  const dotC = (
-    x: CanvasRenderingContext2D,
-    cx: number,
-    cy: number,
-    rr: number,
-  ) => {
-    x.beginPath();
-    x.arc(cx, cy, rr, 0, 7);
-    x.fill();
-  };
-  const emoteTextures: THREE.CanvasTexture[] = [];
-  function emoteTex(kind: string) {
-    const s = 128;
-    const cv = document.createElement("canvas");
-    cv.width = cv.height = s;
-    const x = cv.getContext("2d")!;
-    x.fillStyle = "#ffffff";
-    x.strokeStyle = "rgba(120,80,40,0.22)";
-    x.lineWidth = 3.5;
-    rrect(x, 14, 12, 100, 74, 24);
-    x.fill();
-    x.stroke();
-    x.beginPath();
-    x.moveTo(54, 84);
-    x.lineTo(62, 104);
-    x.lineTo(72, 84);
-    x.closePath();
-    x.fillStyle = "#ffffff";
-    x.fill();
-    const cx = 64;
-    const cy = 48;
-    x.lineWidth = 3;
-    x.lineCap = "round";
-    if (kind === "smile") {
-      x.fillStyle = "#6e4a2e";
-      dotC(x, cx - 13, cy - 6, 5);
-      dotC(x, cx + 13, cy - 6, 5);
-      x.strokeStyle = "#6e4a2e";
-      x.beginPath();
-      x.arc(cx, cy - 2, 16, 0.16 * Math.PI, 0.84 * Math.PI);
-      x.stroke();
-    } else if (kind === "heart") {
-      x.fillStyle = "#cf5a3a";
-      x.beginPath();
-      x.moveTo(cx, cy + 16);
-      x.bezierCurveTo(cx - 22, cy - 2, cx - 10, cy - 20, cx, cy - 6);
-      x.bezierCurveTo(cx + 10, cy - 20, cx + 22, cy - 2, cx, cy + 16);
-      x.fill();
-    } else if (kind === "chat") {
-      x.fillStyle = "#6e4a2e";
-      dotC(x, cx - 16, cy, 5);
-      dotC(x, cx, cy, 5);
-      dotC(x, cx + 16, cy, 5);
-    } else if (kind === "coffee") {
-      x.fillStyle = "#a9763f";
-      rrect(x, cx - 15, cy - 4, 26, 22, 4);
-      x.fill();
-      x.strokeStyle = "#a9763f";
-      x.beginPath();
-      x.arc(cx + 15, cy + 7, 7, -1.5, 1.5);
-      x.stroke();
-      x.strokeStyle = "#cbab90";
-      x.lineWidth = 3;
-      for (const o of [-7, 3]) {
-        x.beginPath();
-        x.moveTo(cx + o, cy - 8);
-        x.quadraticCurveTo(cx + o + 7, cy - 16, cx + o, cy - 25);
-        x.stroke();
-      }
-    } else {
-      x.fillStyle = "#6e4a2e";
-      for (let r = 0; r < 2; r++)
-        for (let c = 0; c < 4; c++) {
-          rrect(x, cx - 22 + c * 11, cy - 6 + r * 10, 8, 7, 2);
-          x.fill();
-        }
-    }
-    const t = new THREE.CanvasTexture(cv);
-    t.anisotropy = maxAniso;
-    emoteTextures.push(t);
-    return t;
-  }
-  const attachEmote = (H: Human, kind: string) => {
-    const spr = new THREE.Sprite(
-      new THREE.SpriteMaterial({
-        map: emoteTex(kind),
-        transparent: true,
-        depthWrite: false,
-        toneMapped: false,
-      }),
-    );
-    spr.scale.set(0.52, 0.52, 0.52);
-    spr.position.set(0, 1.04, 0);
-    spr.material.opacity = 0;
-    H.pv.add(spr);
-    H.emote = spr;
-    H.kind = kind;
-  };
-
   const RCEN: [number, number][] = [
     [-4.25, 2.5],
     [2.0, 1.75],
@@ -1365,10 +1295,10 @@ export function createLandingHeroScene(
   const pick = <Tp>(arr: Tp[], a: number): Tp =>
     arr[Math.floor(rnd(a) * arr.length) % arr.length]!;
 
-  const PER = 45;
-  const HOLD = 17.5;
-  const TRANS = 5;
-  const DROP_H = 2.4;
+  const PER = 96;
+  const HOLD = 38;
+  const TRANS = 10;
+  const DROP_H = 0.02;
   const ease = (t: number) => t * t * (3 - 2 * t);
 
   type PersonGroup = {
@@ -1533,7 +1463,7 @@ export function createLandingHeroScene(
       pv.add(H.g);
       house.add(pv);
       H.pv = pv;
-      attachEmote(H, KINDS[pidx++ % KINDS.length]!);
+      H.kind = KINDS[pidx++ % KINDS.length]!;
       Hs.push(H);
     }
     const bd = BED[ri];
@@ -1577,16 +1507,16 @@ export function createLandingHeroScene(
 
   const catcher = new THREE.Mesh(
     new THREE.PlaneGeometry(120, 120),
-    new THREE.ShadowMaterial({ opacity: 0.62, color: 0x5a2410 }),
+    new THREE.ShadowMaterial({ opacity: 0.3, color: 0x2b231a }),
   );
   catcher.rotation.x = -Math.PI / 2;
   catcher.position.y = BASE;
   catcher.receiveShadow = !testMode;
   pivot.add(catcher);
 
-  scene.add(new THREE.HemisphereLight(0xffdcb8, 0xe6a878, 0.25));
-  scene.add(new THREE.AmbientLight(0xffd5a2, 0.05));
-  const key = new THREE.DirectionalLight(0xffc987, 1.05);
+  scene.add(new THREE.HemisphereLight(0xfff4e6, 0xb49c7e, 0.2));
+  scene.add(new THREE.AmbientLight(0xfff4e6, 0.05));
+  const key = new THREE.DirectionalLight(0xfff0d8, 1.05);
   key.position.set(8, 20, 11);
   key.castShadow = !testMode;
   if (!testMode) {
@@ -1613,7 +1543,7 @@ export function createLandingHeroScene(
     [7.0, 2.2, 2.5],
   ];
   lampPos.forEach((p, i) => {
-    const L = new THREE.PointLight(PAL[i]!.lamp, 2.6, 8, 2);
+    const L = new THREE.PointLight(PAL[i]!.lamp, 1.8, 8, 2);
     L.position.set(p[0], p[1], p[2]);
     house.add(L);
   });
@@ -1807,15 +1737,20 @@ export function createLandingHeroScene(
     });
     s.ri = bi;
   });
-  const FAR_ZOOM = OVERVIEW_ZOOM * 0.24;
-  const DROP_ROOM = 9;
-  const DROP_FURN = 5;
-  const R_FALL = 1.05;
+  const FAR_ZOOM = OVERVIEW_ZOOM * 0.42;
+  const GROW_DUR = 1.05;
+  const GROW_STAGGER = 0.028;
+  const SETTLE_H = 0.12;
+  const SETTLE_DUR = 0.7;
   const F_FALL = 0.85;
-  const ROOM_ORDER = [3, 2, 1, 0, 4];
-  const roomStart: Record<number, number> = {};
-  ROOM_ORDER.forEach((ri, i) => {
-    roomStart[ri] = i * 0.24;
+  const easeOutCubic = (t: number) => 1 - (1 - t) * (1 - t) * (1 - t);
+  const growOrder = [...introStruct].sort((a, b) => {
+    const ay = a.baseY + a.dBottom;
+    const by = b.baseY + b.dBottom;
+    return ay - by || a.x - b.x || a.z - b.z;
+  });
+  growOrder.forEach((s, i) => {
+    s.delay = Math.min(i * GROW_STAGGER, 2.1);
   });
 
   const TOUR_ORDER = [0, 1, 4, 3, 2];
@@ -1907,7 +1842,6 @@ export function createLandingHeroScene(
   const furnStart = (o: AnimPiece) => roomLandT[o.ri]! - F_FALL + o.lp * 0.22;
   const pplStart = (g: PersonGroup) => roomLandT[g.ri]! - F_FALL + 0.1;
   const clamp01 = (x: number) => (x < 0 ? 0 : x > 1 ? 1 : x);
-  const gravFall = (p: number) => 1 - p * p;
   let introStart: number | null = null;
   let introFired = false;
   let openingCompleteFired = false;
@@ -1994,6 +1928,7 @@ export function createLandingHeroScene(
       for (const s of introStruct) {
         s.mesh.visible = true;
         s.mesh.position.y = s.baseY;
+        s.mesh.scale.y = 1;
       }
       for (const o of animPieces) o.mesh.visible = true;
       for (const g of grp) g.Hs.forEach((H) => (H.pv.visible = true));
@@ -2069,16 +2004,6 @@ export function createLandingHeroScene(
             H.armL.rotation.x = -1.15 + tp;
             H.armR.rotation.x = -1.15 - tp;
           }
-          if (H.emote) {
-            const vis =
-              pose === "walk" ? 0 : Math.sin(pt * 0.5 + k * 2) > 0.1 ? 1 : 0;
-            H.emote.material.opacity += (vis - H.emote.material.opacity) * 0.07;
-            const ph = pt * 2.2 + k;
-            const drift = H.kind === "coffee" ? 0.05 : 0.03;
-            H.emote.position.y = 1.04 + Math.sin(ph) * drift;
-            const sc = 0.5 + 0.045 * Math.sin(ph * 1.3);
-            H.emote.scale.set(sc, sc, sc);
-          }
         });
       }
       for (const o of animPieces) {
@@ -2107,21 +2032,23 @@ export function createLandingHeroScene(
       }
       if (inIntro) {
         for (const s of introStruct) {
-          const st = roomStart[s.ri] || 0;
-          const p = clamp01((introE - st) / R_FALL);
-          s.mesh.visible = introE >= st;
-          s.mesh.position.y = s.baseY + DROP_ROOM * gravFall(p);
+          const e = clamp01((introE - s.delay) / GROW_DUR);
+          const p = easeOutCubic(e);
+          s.mesh.visible = introE >= s.delay;
+          s.mesh.scale.y = Math.max(p, 0.0001);
+          s.mesh.position.y = s.baseY + s.dBottom * (1 - p);
         }
         for (const o of animPieces) {
           const st = furnStart(o);
-          const p = clamp01((introE - st) / F_FALL);
+          const p = easeOutCubic(clamp01((introE - st) / SETTLE_DUR));
           o.mesh.visible = introE >= st;
-          o.mesh.position.y += DROP_FURN * gravFall(p);
+          o.mesh.position.y += SETTLE_H * (1 - p);
+          o.mesh.scale.y = 0.94 + 0.06 * p;
         }
         for (const g of grp) {
           const st = pplStart(g);
-          const p = clamp01((introE - st) / F_FALL);
-          const off = DROP_FURN * gravFall(p);
+          const p = easeOutCubic(clamp01((introE - st) / SETTLE_DUR));
+          const off = SETTLE_H * (1 - p);
           g.Hs.forEach((H) => {
             H.pv.visible = introE >= st;
             H.pv.position.y += off;
@@ -2418,7 +2345,7 @@ export function createLandingHeroScene(
           : [mesh.material]
         ).forEach((m) => m && m.dispose());
     });
-    [texFabric, texPlaster, texWood, texWall, ...emoteTextures].forEach((t) => {
+    [texFabric, texPlaster, texWood, texWall].forEach((t) => {
       if (t && t.dispose) t.dispose();
     });
     if (scene.environment && scene.environment.dispose)

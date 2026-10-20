@@ -54,7 +54,7 @@ export function CorporateShell({
         </div>
         <details className={s.mobileNav}>
           <summary>
-            Explore Furnishes <span aria-hidden="true">＋</span>
+            Menu <span aria-hidden="true">＋</span>
           </summary>
           <nav aria-label="Mobile navigation">
             {navigation.map(([href, label]) => (
@@ -68,9 +68,14 @@ export function CorporateShell({
             ))}
             <a href="/how-it-works">How it works ↗</a>
             <a href="/partners/huagui">Our supply partner ↗</a>
-            <a href={userLabel ? "/account" : "/login"}>
-              {userLabel ? "Workspace" : "Log in"} ↗
-            </a>
+            <div className={s.mobileActions}>
+              <a href={userLabel ? "/account" : "/login"}>
+                {userLabel ? "Workspace" : "Log in"} ↗
+              </a>
+              <a className={s.smallButton} href="/contact">
+                Discuss a project ↗
+              </a>
+            </div>
           </nav>
         </details>
       </header>

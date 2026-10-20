@@ -39,20 +39,20 @@ function HouseFallback() {
         width="72%"
         height="72%"
         fill="none"
-        stroke="#6e1810"
+        stroke="#7E5738"
         strokeWidth="2.2"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <path d="M60 120 L160 70 L260 120 L160 170 Z" fill="#FFF2E5" />
-        <path d="M60 120 L60 190 L160 230 L160 170 Z" fill="#FFE1CE" />
-        <path d="M260 120 L260 190 L160 230 L160 170 Z" fill="#FFD3BC" />
+        <path d="M60 120 L160 70 L260 120 L160 170 Z" fill="#FFFCF7" />
+        <path d="M60 120 L60 190 L160 230 L160 170 Z" fill="#F6DDC2" />
+        <path d="M260 120 L260 190 L160 230 L160 170 Z" fill="#E9C49A" />
         <path d="M96 138 L96 172" opacity="0.5" />
         <path d="M128 154 L128 188" opacity="0.5" />
         <path d="M192 154 L192 188" opacity="0.5" />
         <path d="M224 138 L224 172" opacity="0.5" />
-        <circle cx="160" cy="118" r="7" fill="#E7551A" stroke="none" />
+        <circle cx="160" cy="118" r="7" fill="#F2AE7E" stroke="none" />
       </svg>
     </div>
   );

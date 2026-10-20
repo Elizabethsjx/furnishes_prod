@@ -7,7 +7,7 @@
 html,
 body {
   min-height: 100%;
-  background-color: #fff2e5;
+  background-color: #faf0e3;
 }
 
 body {
@@ -15,8 +15,8 @@ body {
 }
 
 :root {
-  --focus-ring: oklch(0.605 0.176 41);
-  --caret: oklch(0.35 0.05 40);
+  --focus-ring: #7e5738;
+  --caret: #3b2a1a;
   accent-color: var(--focus-ring);
   caret-color: var(--caret);
 }

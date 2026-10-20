@@ -875,14 +875,14 @@
           "nodes": 0
         },
         "sans": {
-          "characters": 2713,
-          "rectArea": 492584.1248703003,
-          "nodes": 103
+          "characters": 2684,
+          "rectArea": 479979.5311203003,
+          "nodes": 102
         },
         "mono": {
-          "characters": 384,
-          "rectArea": 54132.75,
-          "nodes": 40
+          "characters": 348,
+          "rectArea": 50465.03125,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
@@ -897,13 +897,13 @@
           "nodes": 0
         },
         "sans": {
-          "characters": 2718,
-          "rectArea": 539666.890625,
-          "nodes": 104
+          "characters": 2684,
+          "rectArea": 542556.40625,
+          "nodes": 102
         },
         "mono": {
-          "characters": 384,
-          "rectArea": 55492.75,
+          "characters": 382,
+          "rectArea": 54074.859375,
           "nodes": 40
         }
       },
@@ -919,14 +919,14 @@
           "nodes": 0
         },
         "sans": {
-          "characters": 2664,
-          "rectArea": 770931.9359436035,
+          "characters": 2651,
+          "rectArea": 751755.6708374023,
           "nodes": 95
         },
         "mono": {
-          "characters": 384,
-          "rectArea": 55627.5,
-          "nodes": 40
+          "characters": 378,
+          "rectArea": 53680.109375,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
@@ -941,14 +941,14 @@
           "nodes": 0
         },
         "sans": {
-          "characters": 2664,
-          "rectArea": 1071717.546875,
+          "characters": 2651,
+          "rectArea": 1026715.265625,
           "nodes": 95
         },
         "mono": {
-          "characters": 384,
-          "rectArea": 55627.5,
-          "nodes": 40
+          "characters": 378,
+          "rectArea": 53680.109375,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
