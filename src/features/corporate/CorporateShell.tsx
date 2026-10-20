@@ -3,11 +3,10 @@ import { ResetLanding } from "./ResetLanding";
 import s from "./corporate.module.css";
 
 const navigation = [
-  ["/commercial", "Business"],
-  ["/residential", "Homes"],
-  ["/space-planning", "Space planning"],
-  ["/collections", "Collections"],
-  ["/projects", "Our work"],
+  ["/services", "Services"],
+  ["/projects", "Projects"],
+  ["/collections", "Furniture & suppliers"],
+  ["/workspace", "3D workspace"],
 ];
 export function CorporateShell({
   children,
@@ -50,7 +49,7 @@ export function CorporateShell({
             {userLabel ? "Workspace" : "Log in"}
           </a>
           <a className={s.smallButton} href="/contact">
-            Get a project quote ↗
+            Discuss a project ↗
           </a>
         </div>
         <details className={s.mobileNav}>

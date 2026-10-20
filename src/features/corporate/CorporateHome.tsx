@@ -1,58 +1,112 @@
 import { CorporateShell, ProjectCTA } from "./CorporateShell";
 import { SpaceScene } from "./SpaceScene";
-import { businessAreas, workflow } from "./content";
+import { businessAreas } from "./content";
 import s from "./corporate.module.css";
+import v from "./spatial.module.css";
+import { SpatialExperience } from "./SpatialExperience";
+import { SpatialWorkflow } from "./SpatialWorkflow";
 
 export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
   return (
     <CorporateShell userLabel={userLabel ?? null}>
-      <div className={s.heroBand}>
-        <section className={s.hero}>
-          <div>
-            <p className={s.eyebrow}>FURNITURE SOURCING · SPATIAL PLANNING</p>
-            <h1>
-              Furniture selected.
-              <br />
-              <em>Projects moving.</em>
-            </h1>
-            <p className={s.chinese} lang="zh">
-              从需求与预算，到可落地的家具方案。
-            </p>
-            <p className={s.lead}>
-              Furniture sourcing and spatial planning for workplaces, shared
-              spaces and homes. Compare the products, see the layout and clarify
-              the project cost.
-            </p>
-            <div className={s.actions}>
-              <a className={s.button} href="/contact?type=commercial">
-                Discuss a commercial project ↗
-              </a>
-              <a className={s.textLink} href="/collections">
-                Explore furniture collections ↗
-              </a>
-            </div>
-            <p className={s.heroNote}>
-              WORKPLACES · RECEPTION & LOUNGE · HOMES
-            </p>
+      <section
+        className={v.hero}
+        aria-label="Space design and furniture selection"
+      >
+        <SpatialExperience />
+        <div className={v.copy}>
+          <p className={s.eyebrow}>SPACE DESIGN · FURNITURE · PEOPLE</p>
+          <h1>
+            Your space.
+            <br />
+            <em>Thoughtfully furnished.</em>
+          </h1>
+          <p className={s.lead}>
+            We design your space, find furniture for your budget and bring it
+            all together in 3D.
+          </p>
+          <div className={s.actions}>
+            <a className={s.button} href="/contact?type=commercial">
+              Discuss your project ↗
+            </a>
+            <a
+              className={s.textLink}
+              href={
+                userLabel
+                  ? "/account/canvas"
+                  : "/login?next=%2Faccount%2Fcanvas"
+              }
+            >
+              Enter your 3D workspace ↗
+            </a>
           </div>
-          <figure className={s.heroArt}>
-            <SpaceScene kind="work" animated />
-            <figcaption>
-              <span>YOUR BRIEF → FURNITURE → SPACE</span>
-              <span>Concept illustration</span>
-            </figcaption>
-          </figure>
-        </section>
-      </div>
+          <p className={v.copyNote}>
+            WORKPLACES & SHARED SPACES · HOMES
+            <br />
+            3D workspace requires sign-in ·{" "}
+            <a href="/workspace">See how it works ↗</a>
+          </p>
+        </div>
+      </section>
       <div className={s.introStrip}>
         <span>SINGAPORE / ASIA</span>
         <p>Clear specifications. Coordinated selections.</p>
         <a href="/contact">Let’s talk ↗</a>
       </div>
+      <section className={s.caseBand}>
+        <div className={s.caseGrid}>
+          <figure>
+            <img
+              src="/cases/bto-family/space-reference.png"
+              alt="Spatial planning reference for a Singapore family apartment"
+              width="1200"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>
+              PLANNING VISUALISATION · NOT A COMPLETED INTERIOR
+            </figcaption>
+          </figure>
+          <div>
+            <p className={s.eyebrow}>01 / PROJECT EVIDENCE</p>
+            <h2>
+              A family home,
+              <br />
+              <em>planned before the keys.</em>
+            </h2>
+            <p>
+              Three daughters. A new BTO home. Furniture choices shaped by
+              storage, personal style and a shared budget.
+            </p>
+            <p className={s.status}>
+              Proposal delivered · Furniture not yet received
+            </p>
+            <a className={s.textLink} href="/projects/bto-family">
+              Follow the project ↗
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className={s.section} id="how-it-works">
+        <div className={s.sectionHeading}>
+          <div>
+            <p className={s.eyebrow}>02 / FROM YOUR BRIEF TO YOUR SPACE</p>
+            <h2>
+              A clear process.
+              <br />
+              <em>A space you can see.</em>
+            </h2>
+          </div>
+          <a className={s.textLink} href="/how-it-works">
+            Explore the process ↗
+          </a>
+        </div>
+        <SpatialWorkflow />
+      </section>
       <section className={s.section} id="business-areas">
         <div className={s.sectionHeading}>
           <div>
-            <p className={s.eyebrow}>01 / SOLUTIONS FOR YOUR PROJECT</p>
+            <p className={s.eyebrow}>03 / SOLUTIONS FOR YOUR PROJECT</p>
             <h2>
               Built around your brief.
               <br />
@@ -85,65 +139,6 @@ export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
         <a className={s.textLink} href="/collections">
           Explore furniture & model collections ↗
         </a>
-      </section>
-      <section className={s.section} id="how-it-works">
-        <div className={s.sectionHeading}>
-          <div>
-            <p className={s.eyebrow}>02 / FROM BRIEF TO PROPOSAL</p>
-            <h2>
-              From your brief
-              <br />
-              to <em>a priced furniture plan.</em>
-            </h2>
-          </div>
-          <a className={s.textLink} href="/how-it-works">
-            Explore the full process ↗
-          </a>
-        </div>
-        <ol className={s.steps}>
-          {workflow.map((step, i) => (
-            <li key={step.title}>
-              <span className={s.number}>0{i + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-              <p className={s.stepOutput}>Deliverable: {step.output}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-      <section className={s.caseBand}>
-        <div className={s.caseGrid}>
-          <figure>
-            <img
-              src="/cases/bto-family/space-reference.png"
-              alt="Spatial planning reference for a Singapore family apartment"
-              width="1200"
-              height="900"
-              loading="lazy"
-            />
-            <figcaption>
-              PLANNING VISUALISATION · NOT A COMPLETED INTERIOR
-            </figcaption>
-          </figure>
-          <div>
-            <p className={s.eyebrow}>03 / PROJECT EVIDENCE</p>
-            <h2>
-              A family home,
-              <br />
-              <em>planned before the keys.</em>
-            </h2>
-            <p>
-              Three daughters. A new BTO home. Furniture choices shaped by
-              storage, personal style and a shared budget.
-            </p>
-            <p className={s.status}>
-              Proposal delivered · Furniture not yet received
-            </p>
-            <a className={s.textLink} href="/projects/bto-family">
-              Follow the project ↗
-            </a>
-          </div>
-        </div>
       </section>
       <section className={s.partnerBand}>
         <div className={s.partnerInner}>
@@ -187,6 +182,54 @@ export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
             </a>
           </div>
         </div>
+      </section>
+      <section className={v.workspace}>
+        <div>
+          <p className={s.eyebrow}>YOUR 3D WORKSPACE</p>
+          <h2>
+            A place to explore.
+            <br />
+            <em>And make it yours.</em>
+          </h2>
+          <p>
+            Review your space, try layout changes and discuss ideas with an AI
+            assistant in the project workspace.
+          </p>
+          <div className={s.actions}>
+            <a
+              className={s.button}
+              href={
+                userLabel
+                  ? "/account/canvas"
+                  : "/login?next=%2Faccount%2Fcanvas"
+              }
+            >
+              Open workspace ↗
+            </a>
+            <a className={s.textLink} href="/workspace">
+              Explore the tools ↗
+            </a>
+          </div>
+          <small>
+            Sign-in required. AI and project saving need connected services.
+          </small>
+        </div>
+        <ul>
+          <li>
+            01 / Your space in 3D
+            <span>Explore the layout from different viewpoints.</span>
+          </li>
+          <li>
+            02 / Try a change
+            <span>Adjust furniture placement as you develop your ideas.</span>
+          </li>
+          <li>
+            03 / Talk it through
+            <span>
+              Use the AI assistant to explore your brief and design questions.
+            </span>
+          </li>
+        </ul>
       </section>
       <ProjectCTA />
     </CorporateShell>

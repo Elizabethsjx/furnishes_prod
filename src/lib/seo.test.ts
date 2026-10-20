@@ -64,6 +64,8 @@ describe("buildSitemap", () => {
       "https://furnish-es.com/commercial",
       "https://furnish-es.com/space-planning",
       "https://furnish-es.com/how-it-works",
+      "https://furnish-es.com/services",
+      "https://furnish-es.com/workspace",
       "https://furnish-es.com/collections",
       "https://furnish-es.com/projects",
       "https://furnish-es.com/partners/huagui",

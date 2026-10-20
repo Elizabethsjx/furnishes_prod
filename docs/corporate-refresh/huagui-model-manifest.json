@@ -1,0 +1,117 @@
+{
+  "source": "/Users/shenjunxi/Downloads/模型整合/模型整合/2——3DMAX模型",
+  "selections": [
+    {
+      "category": "1——趣系列",
+      "files": [
+        {
+          "reference": "SA303",
+          "source": "SA303.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "SA507",
+          "source": "SA507.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X913",
+          "source": "X913合集.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        }
+      ]
+    },
+    {
+      "category": "2——雅系列",
+      "files": [
+        {
+          "reference": "X907",
+          "source": "X907.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X928",
+          "source": "X928.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X921",
+          "source": "X921.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        }
+      ]
+    },
+    {
+      "category": "3——智系列",
+      "files": [
+        {
+          "reference": "X901",
+          "source": "X901.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X902",
+          "source": "X902.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "SA111",
+          "source": "SA111.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        }
+      ]
+    },
+    {
+      "category": "4——轩系列",
+      "files": [
+        {
+          "reference": "X958",
+          "source": "X958.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X959",
+          "source": "X959.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "X976",
+          "source": "X976.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        }
+      ]
+    },
+    {
+      "category": "5——桌几 系列",
+      "files": [
+        {
+          "reference": "CJ106",
+          "source": "CJ106.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "CJB09",
+          "source": "CJB09.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        },
+        {
+          "reference": "QTZ112",
+          "source": "QTZ112洽谈桌.max",
+          "status": "requires 3ds Max export; no browser model supplied"
+        }
+      ]
+    }
+  ],
+  "webImages": [
+    {
+      "source": "1266.zip/a (1).png",
+      "web": "/suppliers/huagui/1266-sofa.jpg",
+      "type": "supplier rendering"
+    },
+    {
+      "source": "1266.zip/a (2).png",
+      "web": "/suppliers/huagui/1266-chair.jpg",
+      "type": "supplier rendering"
+    }
+  ]
+}

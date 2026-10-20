@@ -16,21 +16,23 @@ export type { LandingHeroSceneHandle } from "./landing-scene-types";
  */
 
 const C = {
-  bone: 0xffe8dc,
-  slab: 0xffb89c,
-  plinth: 0xffa888,
-  wood: 0xffb89c,
-  clay: 0xfb4a21,
-  moss: 0xff8a66,
-  ochre: 0xff5f33,
-  stone: 0xff7148,
-  teal: 0xff5f33,
-  slate: 0xd62a0a,
-  glass: 0xffe4da,
-  sage: 0xf23a16,
+  bone: 0xf3ede4,
+  slab: 0xe9d9c6,
+  plinth: 0xdec7ae,
+  wood: 0xe2ccb1,
+  clay: 0xc48c6a,
+  moss: 0xd8b49a,
+  ochre: 0xd3a47c,
+  stone: 0xd6b79c,
+  teal: 0xd3a47c,
+  slate: 0x98735c,
+  glass: 0xf3e9dd,
+  sage: 0xc69b7d,
 };
 
 type LandingHeroSceneOptions = {
+  overviewZoom?: number;
+  captureSnapshot?: boolean;
   mount: HTMLElement;
   skipIntro?: boolean;
   /**
@@ -309,7 +311,7 @@ export function createLandingHeroScene(
     {
       wall: 0xffe8dc,
       seat: 0xfff6f1,
-      back: 0xff5f33,
+      back: 0xd3a47c,
       arm: 0xfff6f1,
       corner: 0xff7148,
       bolster: 0xfb4a21,
@@ -321,7 +323,7 @@ export function createLandingHeroScene(
       back: 0xff7148,
       arm: 0xfff6f1,
       corner: 0xff8a66,
-      bolster: 0xff5f33,
+      bolster: 0xd3a47c,
       lamp: 0xffdccf,
     },
     {
@@ -338,7 +340,7 @@ export function createLandingHeroScene(
       seat: 0xfff6f1,
       back: 0xfb4a21,
       arm: 0xfff6f1,
-      corner: 0xff5f33,
+      corner: 0xd3a47c,
       bolster: 0xf23a16,
       lamp: 0xffd9cc,
     },
@@ -1104,7 +1106,7 @@ export function createLandingHeroScene(
   );
 
   // ── inhabitants ──────────────────────────────────────────────
-  const PCOL = [0xff5f33, 0xfff3ee, 0xff8a66, 0xf23a16, 0xfff3ee];
+  const PCOL = [0xd3a47c, 0xfff3ee, 0xff8a66, 0xf23a16, 0xfff3ee];
   const skin = mat(0xe0a77f, 0.8);
   const hair = mat(0x5a3322, 0.9);
   const pants = mat(0xc9684a, 0.9);
@@ -1661,7 +1663,7 @@ export function createLandingHeroScene(
     camera.updateProjectionMatrix();
   }
   fit();
-  const OVERVIEW_ZOOM = 4.0;
+  const OVERVIEW_ZOOM = options.overviewZoom ?? 4.0;
   const ROOM_ZOOM = 6.5;
   const MIN_ZOOM = OVERVIEW_ZOOM * 0.85;
   let zoomGoal = OVERVIEW_ZOOM;
@@ -1784,7 +1786,7 @@ export function createLandingHeroScene(
     renderer.setSize(width, height);
     fit();
     options.onResize?.(renderer.domElement.width, renderer.domElement.height);
-    if (testMode) demandRender?.();
+    if (testMode || paused) demandRender?.();
   });
   ro.observe(mount);
 
@@ -1916,7 +1918,7 @@ export function createLandingHeroScene(
   let freezeFrames = 0;
 
   const captureFreeze = () => {
-    if (testMode) return;
+    if (testMode || options.captureSnapshot === false) return;
     saveLandingFreezeFromCanvas(renderer.domElement);
   };
 
@@ -2251,12 +2253,13 @@ export function createLandingHeroScene(
       if (show) {
         const eased = vis < 1 ? 1 - Math.pow(1 - vis, 3) : 1;
         const slide = (1 - eased) * 14;
+        const labelX = Math.max(70, Math.min(width - 70, px * width));
         updateLabelStyle(ri, labelEl, {
           display: "flex",
           opacity: String(eased),
           transform:
             `translate(-50%,-50%) ` +
-            `translate(${px * width}px,${py * height + slide}px)`,
+            `translate(${labelX}px,${py * height + slide}px)`,
           roomVisible: "true",
         });
       } else {
@@ -2313,7 +2316,10 @@ export function createLandingHeroScene(
     camera.zoom = OVERVIEW_ZOOM;
   }
 
-  demandRender = () => paintFrame();
+  demandRender = () => {
+    if (testMode) paintFrame();
+    else renderLoop();
+  };
 
   if (testMode) {
     /* Demand-driven: one settled frame, then stop the continuous loop. */
@@ -2432,21 +2438,23 @@ export function createLandingHeroScene(
         paintFrame();
         return;
       }
-      if (p) paintFrame();
+      if (p) renderLoop();
       syncLoop();
     },
     focusRoom: (roomIndex: number) => {
-      if (testMode) {
+      if (testMode || paused) {
         settleToRoom(roomIndex);
-        paintFrame();
+        if (testMode) paintFrame();
+        else renderLoop();
       } else {
         focusReqRef.current = roomIndex;
       }
     },
     showOverview: () => {
-      if (testMode) {
+      if (testMode || paused) {
         settleToOverview();
-        paintFrame();
+        if (testMode) paintFrame();
+        else renderLoop();
       } else {
         focusReqRef.current = "overview";
       }

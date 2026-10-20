@@ -7,6 +7,8 @@ import type { LandingHeroSceneHandle } from "./three/landing-scene-types";
 const HERO_ROOM_NAMES = ["LIVING", "STUDIO", "LOUNGE", "NOOK", "WING"] as const;
 
 type LandingHeroProps = {
+  overviewZoom?: number;
+  captureSnapshot?: boolean;
   onIntroDone?: () => void;
   onReady?: () => void;
   skipIntro?: boolean;
@@ -61,7 +63,11 @@ export function LandingHero({
   onReady,
   skipIntro = false,
   e2eMode = false,
+  overviewZoom = 4,
+  captureSnapshot = true,
 }: LandingHeroProps) {
+  const captureSnapshotRef = useRef(captureSnapshot);
+  const overviewZoomRef = useRef(overviewZoom);
   const mountRef = useRef<HTMLDivElement>(null);
   const labelRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const sceneHandleRef = useRef<LandingHeroSceneHandle | null>(null);
@@ -133,10 +139,17 @@ export function LandingHero({
 
     let disposed = false;
     let handle: LandingHeroSceneHandle | null = null;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotion = () => {
+      handle?.setPaused(motion.matches);
+      setPaused(motion.matches);
+    };
+    motion.addEventListener("change", syncMotion);
 
     const safeDispose = () => {
       if (disposed) return;
       disposed = true;
+      motion.removeEventListener("change", syncMotion);
       handle?.dispose();
       sceneHandleRef.current = null;
     };
@@ -146,7 +159,9 @@ export function LandingHero({
         if (disposed || leavingRef.current) return;
         handle = createLandingHeroScene({
           mount,
-          skipIntro: skipIntroRef.current,
+          overviewZoom: overviewZoomRef.current,
+          captureSnapshot: captureSnapshotRef.current,
+          skipIntro: skipIntroRef.current || motion.matches,
           testMode: e2eModeRef.current,
           getLabelEl: (ri) => labelRefs.current[ri] ?? null,
           onGlFailed: () => {
@@ -171,6 +186,7 @@ export function LandingHero({
         });
 
         sceneHandleRef.current = handle;
+        syncMotion();
         if (!handle) {
           setRendererState("fallback");
           setGlFailed(true);

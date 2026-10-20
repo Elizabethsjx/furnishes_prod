@@ -205,6 +205,7 @@ const models = [
   ["雅系列 / Ya", "X907", "X928", "X921"],
   ["智系列 / Zhi", "X901", "X902", "SA111"],
   ["轩系列 / Xuan", "X958", "X959", "X976"],
+  ["桌几系列 / Tables", "CJ106", "CJB09", "QTZ112 洽谈桌"],
 ];
 export function CollectionsPage() {
   return (
@@ -223,10 +224,42 @@ export function CollectionsPage() {
         </p>
       </section>
       <section className={s.section}>
+        <p className={s.eyebrow}>FROM THE SHARED PRODUCT LIBRARY</p>
+        <h2>Seating, in focus.</h2>
+        <div className={s.twoGrid}>
+          {[
+            { image: "1266-sofa", name: "Two-seat sofa" },
+            { image: "1266-chair", name: "Lounge chair" },
+          ].map((product) => (
+            <article className={s.collectionCard} key={product.image}>
+              <img
+                src={"/suppliers/huagui/" + product.image + ".jpg"}
+                alt={product.name + " in grey upholstery with ochre arms"}
+                width="1200"
+                height="1200"
+                loading="lazy"
+              />
+              <h3>{product.name}</h3>
+              <p>1266 archive · Supplier-provided product rendering</p>
+              <a
+                className={s.textLink}
+                href="/contact?type=commercial&collection=1266"
+              >
+                Ask about this product ↗
+              </a>
+            </article>
+          ))}
+        </div>
+        <p className={s.note}>
+          Images supplied in the shared model library. Confirm product
+          reference, dimensions and finishes with us.
+        </p>
+      </section>
+      <section className={s.section}>
         <div className={s.sectionHeading}>
           <div>
             <p className={s.eyebrow}>HUAGUI / MODEL LIBRARY</p>
-            <h2>Four series to explore.</h2>
+            <h2>Five series to explore.</h2>
           </div>
           <a className={s.textLink} href="/partners/huagui">
             About the collaboration ↗
@@ -303,9 +336,54 @@ export function PartnerPage() {
           桐乡华桂家具
         </p>
         <p className={s.lead}>
-          Connecting a supplier’s product knowledge with your project
-          requirements. Our collaboration starts with furniture references and a
-          shared model library for selection and spatial planning.
+          An office-furniture partner connecting design, manufacturing,
+          installation and after-sales service. Together, we bring furniture
+          selection into the context of your space.
+        </p>
+      </section>
+      <section className={s.section}>
+        <p className={s.eyebrow}>
+          COMPANY BACKGROUND / SUPPLIER-PROVIDED PROFILE
+        </p>
+        <h2>
+          Office furniture.
+          <br />
+          <em>Broader project possibilities.</em>
+        </h2>
+        <p>
+          Tongxiang Huagui Furniture Co., Ltd. describes itself as a
+          Sino-foreign joint venture based in Heshan Economic Development Zone,
+          Tongxiang, Zhejiang. Its company profile brings together
+          office-environment design, furniture manufacturing, installation and
+          after-sales service.
+        </p>
+        <div className={s.threeGrid}>
+          <article className={s.detailCard}>
+            <h3>Office environments</h3>
+            <p>
+              Executive desks and chairs, conference tables, workstations,
+              screens, bookcases and supporting storage.
+            </p>
+          </article>
+          <article className={s.detailCard}>
+            <h3>Shared & living spaces</h3>
+            <p>
+              Sofas, lounge seating, dining furniture and furniture for suites
+              and shared spaces.
+            </p>
+          </article>
+          <article className={s.detailCard}>
+            <h3>Project furnishing</h3>
+            <p>
+              The supplied profile also describes hotel furniture, project
+              furnishing and whole-wood customisation.
+            </p>
+          </article>
+        </div>
+        <p className={s.note}>
+          Background summarised from the company profile supplied to Furnishes.
+          Product scope, specifications and service arrangements are confirmed
+          for each project.
         </p>
       </section>
       <section className={s.softBand}>
