@@ -24,3 +24,5 @@ src/app/api/studio/
 src/app/api/conversations/
 # Playground catalog seeds
 public/studio/catalog/
+# 3D example app source — uses the minified Three.js bundle's short names; see its header.
+examples-src/

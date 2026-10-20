@@ -78,6 +78,7 @@ export default tseslint.config(
       "**/test-results/**",
       ".data/**",
       "reference/**",
+      "examples-src/**",
       "next-env.d.ts",
     ],
   },

@@ -60,6 +60,14 @@ describe("buildSitemap", () => {
     );
     expect(urls.map((entry) => entry.url)).toEqual([
       "https://furnish-es.com/",
+      "https://furnish-es.com/residential",
+      "https://furnish-es.com/commercial",
+      "https://furnish-es.com/space-planning",
+      "https://furnish-es.com/how-it-works",
+      "https://furnish-es.com/collections",
+      "https://furnish-es.com/projects",
+      "https://furnish-es.com/partners/huagui",
+      "https://furnish-es.com/projects/bto-family",
       "https://furnish-es.com/quiz",
       "https://furnish-es.com/contact",
       "https://furnish-es.com/terms",

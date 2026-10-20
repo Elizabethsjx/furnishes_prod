@@ -35,6 +35,8 @@
     "audit:prod": "pnpm audit --prod --audit-level=moderate",
     "check:prod-config": "tsx scripts/check-production-config.ts",
     "check:reference-integrity": "node scripts/check-reference-integrity.mjs",
+    "build:family-apartment": "node scripts/build-family-apartment.mjs",
+    "check:family-apartment": "node scripts/build-family-apartment.mjs --check",
     "check:account-architecture": "node scripts/check-account-architecture.mjs",
     "migrate:legacy-chat:dry-run": "tsx scripts/migrate-legacy-chat.ts",
     "migrate:legacy-chat:apply": "tsx scripts/migrate-legacy-chat.ts --apply",
