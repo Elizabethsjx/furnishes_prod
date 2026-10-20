@@ -32,6 +32,12 @@ const C = {
 
 type LandingHeroSceneOptions = {
   overviewZoom?: number;
+  /**
+   * Wide screens only: nudge the orthographic window so the house settles to
+   * the right of centre (fraction of viewport width, 0–0.3). Lets the hero
+   * copy breathe over the scene without hiding the house.
+   */
+  overviewShiftX?: number;
   captureSnapshot?: boolean;
   mount: HTMLElement;
   skipIntro?: boolean;
@@ -1586,8 +1592,13 @@ export function createLandingHeroScene(
   function fit() {
     const a = width / height;
     const f = a >= 1 ? 2 * R : (2 * R) / a;
-    camera.left = (-f * a) / 2;
-    camera.right = (f * a) / 2;
+    const w = f * a;
+    /* Wide screens: shift the ortho window left so the house reads right of
+       centre, clear of the hero copy. Narrow/portrait stays centred. */
+    const shiftFrac = options.overviewShiftX ?? 0;
+    const shift = a >= 1.2 ? -shiftFrac * w : 0;
+    camera.left = -w / 2 + shift;
+    camera.right = w / 2 + shift;
     camera.top = f / 2;
     camera.bottom = -f / 2;
     camera.updateProjectionMatrix();

@@ -40,16 +40,12 @@ export function CorporateHome({ userLabel }: { userLabel?: string | null }) {
               Enter your 3D workspace ↗
             </a>
           </div>
-          <p className={v.copyNote}>
-            WORKPLACES &amp; SHARED SPACES · HOMES — 3D WORKSPACE SIGN-IN
-            REQUIRED · <a href="/workspace">How it works ↗</a>
-          </p>
         </div>
       </section>
       <div className={s.introStrip}>
         <span>SINGAPORE / ASIA</span>
         <p>Clear specifications. Coordinated selections.</p>
-        <a href="/contact">Let’s talk ↗</a>
+        <a href="/how-it-works">How it works ↗</a>
       </div>
       <section className={s.caseBand}>
         <div className={s.caseGrid}>

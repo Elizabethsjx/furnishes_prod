@@ -8,6 +8,8 @@ const HERO_ROOM_NAMES = ["LIVING", "STUDIO", "LOUNGE", "NOOK", "WING"] as const;
 
 type LandingHeroProps = {
   overviewZoom?: number;
+  /** Wide screens: settle the house right of centre (fraction of viewport). */
+  overviewShiftX?: number;
   captureSnapshot?: boolean;
   onIntroDone?: () => void;
   onReady?: () => void;
@@ -64,10 +66,12 @@ export function LandingHero({
   skipIntro = false,
   e2eMode = false,
   overviewZoom = 4,
+  overviewShiftX = 0,
   captureSnapshot = true,
 }: LandingHeroProps) {
   const captureSnapshotRef = useRef(captureSnapshot);
   const overviewZoomRef = useRef(overviewZoom);
+  const overviewShiftXRef = useRef(overviewShiftX);
   const mountRef = useRef<HTMLDivElement>(null);
   const labelRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const sceneHandleRef = useRef<LandingHeroSceneHandle | null>(null);
@@ -160,6 +164,7 @@ export function LandingHero({
         handle = createLandingHeroScene({
           mount,
           overviewZoom: overviewZoomRef.current,
+          overviewShiftX: overviewShiftXRef.current,
           captureSnapshot: captureSnapshotRef.current,
           skipIntro: skipIntroRef.current || motion.matches,
           testMode: e2eModeRef.current,
