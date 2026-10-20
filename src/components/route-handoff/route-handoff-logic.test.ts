@@ -101,7 +101,9 @@ describe("handoffCoverColor", () => {
     expect(handoffCoverColor("/")).toBe(LANDING_HANDOFF_BG);
     expect(handoffCoverColor("/quiz")).toBe(QUIZ_HANDOFF_BG);
     expect(handoffCoverColor("/login")).toBe(PEACH_HANDOFF_BG);
-    expect(handoffCoverColor("/contact")).toBe(PEACH_HANDOFF_BG);
+    expect(handoffCoverColor("/contact")).toBe(LANDING_HANDOFF_BG);
+    expect(handoffCoverColor("/commercial")).toBe(LANDING_HANDOFF_BG);
+    expect(handoffCoverColor("/partners/huagui")).toBe(LANDING_HANDOFF_BG);
     expect(handoffCoverColor("/account")).toBe(PEACH_HANDOFF_BG);
     expect(handoffCoverColor("/account/canvas")).toBe(CANVAS_HANDOFF_BG);
   });

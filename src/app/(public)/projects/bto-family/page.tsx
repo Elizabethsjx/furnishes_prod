@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CommercialLanding } from "@/features/landing/CommercialLanding";
+import { FamilyCase } from "@/features/corporate/FamilyCase";
 import { publicPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = publicPageMetadata({
@@ -9,5 +9,5 @@ export const metadata: Metadata = publicPageMetadata({
   path: "/projects/bto-family",
 });
 export default function FamilyCasePage() {
-  return <CommercialLanding caseStudy />;
+  return <FamilyCase />;
 }

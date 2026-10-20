@@ -1,5 +1,5 @@
-/** Hero-band orange — same as landing html/body paint. */
-export const LANDING_HANDOFF_BG = "#e83200";
+/** Corporate homepage paper. */
+export const LANDING_HANDOFF_BG = "#f4f0e7";
 /** Quiz document paint. */
 export const QUIZ_HANDOFF_BG = "#1a1714";
 /** Account / auth / legal paper. */
@@ -34,7 +34,20 @@ function routeSurface(pathname: string): RouteSurface {
   return "public";
 }
 
+const CORPORATE_PATHS = new Set([
+  "/residential",
+  "/commercial",
+  "/space-planning",
+  "/how-it-works",
+  "/collections",
+  "/projects",
+  "/projects/bto-family",
+  "/partners/huagui",
+  "/contact",
+]);
+
 function surfaceColor(pathname: string) {
+  if (CORPORATE_PATHS.has(pathname)) return LANDING_HANDOFF_BG;
   switch (routeSurface(pathname)) {
     case "landing":
       return LANDING_HANDOFF_BG;

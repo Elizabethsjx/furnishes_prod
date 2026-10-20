@@ -3,9 +3,9 @@ import { routes } from "@/lib/contracts/routes";
 import { resolvedPublicOrigin } from "@/server/app-origin";
 
 export const SITE_NAME = "Furnishes";
-export const SITE_TITLE = "Furnishes | Interior Design Studio";
+export const SITE_TITLE = "Furnishes | Furniture Sourcing & Spatial Planning";
 export const SITE_DESCRIPTION =
-  "Furnishes is an interior design studio for modern living. Concept, planning, and 3D visualization that turn clear plans into calm, lasting spaces.";
+  "Furnishes connects furniture sourcing and spatial planning for homes, workplaces and shared spaces, from your brief to a considered selection and visual proposal.";
 export const SITE_EMAIL = "hello@furnish-es.com";
 
 export const NOINDEX_ROBOTS = {
@@ -156,6 +156,14 @@ export function buildSitemap(
     priority: number;
   }> = [
     { path: routes.home, changeFrequency: "weekly", priority: 1 },
+    { path: "/residential", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/commercial", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/space-planning", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/how-it-works", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/collections", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/projects", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/partners/huagui", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/projects/bto-family", changeFrequency: "monthly", priority: 0.8 },
     { path: routes.quiz, changeFrequency: "monthly", priority: 0.8 },
     { path: routes.contact, changeFrequency: "monthly", priority: 0.7 },
     { path: routes.terms, changeFrequency: "yearly", priority: 0.3 },
@@ -188,7 +196,7 @@ export function siteJsonLd(origin: string) {
           "@type": "Country",
           name: "Singapore",
         },
-        serviceType: "Interior design",
+        serviceType: ["Furniture sourcing", "Spatial planning"],
       },
       {
         "@type": "WebSite",
