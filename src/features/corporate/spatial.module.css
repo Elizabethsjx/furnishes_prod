@@ -1,0 +1,428 @@
+.hero {
+  position: relative;
+  min-height: 720px;
+  height: calc(100svh - 96px);
+  max-height: 1120px;
+  background:
+    radial-gradient(
+      46% 58% at 76% 4%,
+      color-mix(in srgb, var(--accent) 55%, transparent),
+      transparent 68%
+    ),
+    linear-gradient(
+      100deg,
+      var(--paper) 30%,
+      var(--paper-2) 62%,
+      var(--accent-soft) 100%
+    );
+  overflow: hidden;
+}
+.world {
+  --public-nav-h: 94px;
+  position: absolute;
+  inset: 0 0 0 23%;
+}
+.worldLabel {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  pointer-events: none;
+  font:
+    9px var(--font-space-mono),
+    monospace;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  opacity: 0.8;
+}
+.copy {
+  position: relative;
+  z-index: 2;
+  width: min(40%, 600px);
+  margin-left: max(5vw, calc((100vw - 1660px) / 2));
+  padding-top: clamp(64px, 9.5vh, 132px);
+  pointer-events: none;
+}
+.copy a {
+  pointer-events: auto;
+}
+.copy h1 {
+  font-size: clamp(2.8rem, 4.8vw, 5.7rem);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+  margin-bottom: 22px;
+}
+.copy p {
+  max-width: 46ch;
+}
+.copyNote {
+  font:
+    10px var(--font-space-mono),
+    monospace;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 100%;
+  margin-top: 18px !important;
+}
+.copyNote a {
+  white-space: nowrap;
+  color: var(--accent-deep);
+  border-bottom: 1px solid var(--accent-deep);
+}
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: radial-gradient(
+    120% 90% at 50% 28%,
+    var(--paper) 0%,
+    var(--accent-soft) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: opacity 0.25s ease;
+}
+.intro[data-leaving="true"] {
+  opacity: 0;
+}
+.introBrand {
+  position: absolute;
+  top: 26px;
+  left: max(24px, calc((100vw - 1520px) / 2));
+  font-family: var(--font-archivo), Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+  line-height: 1;
+  color: var(--ink);
+}
+.introBrand span {
+  display: block;
+  margin-top: 9px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  line-height: 1.4;
+}
+.intro button {
+  position: absolute;
+  bottom: 34px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--accent-deep) 55%, transparent);
+  cursor: pointer;
+  padding: 9px 0;
+  color: var(--accent-deep);
+  font:
+    10px var(--font-space-mono),
+    monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.introChair {
+  width: clamp(180px, 22vw, 252px);
+  margin-bottom: 30px;
+  color: var(--accent-deep);
+}
+.introChair svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.introChair path,
+.introChair line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.introChair .fill {
+  fill: color-mix(in srgb, var(--accent) 52%, transparent);
+  stroke: currentColor;
+}
+.introCaption {
+  font:
+    10px var(--font-space-mono),
+    monospace;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 22px !important;
+}
+.introProgress {
+  width: 128px;
+  height: 1px;
+  background: color-mix(in srgb, var(--line-strong) 70%, transparent);
+  overflow: hidden;
+}
+.introProgress i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-deep);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .introProgress i {
+    animation: intro-progress 1.25s 0.05s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .introChair .part {
+    opacity: 0;
+    animation: chair-settle 280ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+  .introChair .part:nth-child(1) {
+    --settle: 6px;
+    animation-delay: 0.02s;
+  }
+  .introChair .part:nth-child(2) {
+    --settle: 4px;
+    animation-delay: 0.14s;
+  }
+  .introChair .part:nth-child(3) {
+    --settle: -6px;
+    animation-delay: 0.32s;
+  }
+  .introChair .part:nth-child(4) {
+    --settle: 5px;
+    animation-delay: 0.5s;
+  }
+  .introChair .part:nth-child(5) {
+    --settle: 4px;
+    animation-delay: 0.7s;
+  }
+}
+@keyframes chair-settle {
+  from {
+    opacity: 0;
+    transform: translateY(var(--settle, 5px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes intro-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+.workflow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: start;
+}
+.workflowVisual {
+  position: sticky;
+  top: 140px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 30px;
+  min-height: 400px;
+}
+.workflowVisual > span,
+.workflowSteps > li > span {
+  font:
+    11px var(--font-space-mono),
+    monospace;
+  color: var(--muted);
+}
+.workflowVisual > svg,
+.workflowVisual > img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  margin: 30px 0;
+}
+.workflowVisual > p {
+  font-size: 14px;
+  margin: 0;
+}
+.brief {
+  padding: 45px 15px;
+}
+.brief strong {
+  font-size: clamp(25px, 3vw, 45px);
+  line-height: 1.3;
+}
+.workflowSteps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.workflowSteps > li {
+  min-height: 340px;
+  padding: 60px 0;
+  border-top: 1px solid var(--line);
+}
+.workflowSteps > li[data-active="true"] {
+  border-top-color: var(--accent-deep);
+}
+.workflowSteps small {
+  display: block;
+  color: var(--muted);
+}
+.workspace {
+  background: var(--paper-3);
+  padding: clamp(32px, 6vw, 95px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.workspace ul {
+  list-style: none;
+  padding: 0;
+}
+.workspace li {
+  padding: 20px 0;
+  border-top: 1px solid var(--line-strong);
+}
+.workspace li span {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+}
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.productGrid article {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.productGrid img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.productGrid small {
+  color: var(--muted);
+}
+@media (min-width: 2100px) {
+  .hero {
+    height: 1100px;
+    max-height: none;
+  }
+  .world {
+    left: 30%;
+    right: 5%;
+  }
+}
+@media (max-width: 1180px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .copy {
+    width: auto;
+    max-width: 680px;
+    margin: 0;
+    padding: 34px 6vw 0;
+  }
+  .copy h1 {
+    font-size: clamp(2.55rem, 8.4vw, 4.4rem);
+  }
+  .world {
+    --public-nav-h: 56px;
+    position: relative;
+    inset: auto;
+    height: 540px;
+  }
+  .workflow {
+    gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .worldLabel {
+    display: none;
+  }
+  .world {
+    height: 370px;
+  }
+  .worldLabel {
+    font-size: 8px;
+    right: 12px;
+    bottom: 7px;
+  }
+  .workflow {
+    display: block;
+  }
+  .workflowVisual {
+    position: relative;
+    top: auto;
+    min-height: 0;
+  }
+  .workflowSteps > li {
+    min-height: 0;
+    padding: 32px 0;
+  }
+  .workflowVisual {
+    display: none;
+  }
+  .workspace,
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+  .workspace {
+    gap: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro {
+    display: none;
+  }
+}
+
+.world {
+  --landing-ink: var(--ink);
+  --landing-font-mono: var(--font-space-mono), monospace;
+  --landing-font-sans: var(--font-archivo), sans-serif;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--paper) 0%,
+    var(--paper) 14%,
+    color-mix(in srgb, var(--paper) 86%, transparent) 20%,
+    color-mix(in srgb, var(--paper) 52%, transparent) 27%,
+    transparent 35%
+  );
+}
+@media (max-width: 1180px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .copy {
+    order: -1;
+  }
+  .hero::after {
+    display: none;
+  }
+  .worldLabel {
+    bottom: 3px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world *,
+  .world *::before,
+  .world *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

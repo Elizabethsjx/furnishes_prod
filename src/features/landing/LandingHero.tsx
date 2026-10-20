@@ -7,6 +7,8 @@ import type { LandingHeroSceneHandle } from "./three/landing-scene-types";
 const HERO_ROOM_NAMES = ["LIVING", "STUDIO", "LOUNGE", "NOOK", "WING"] as const;
 
 type LandingHeroProps = {
+  overviewZoom?: number;
+  captureSnapshot?: boolean;
   onIntroDone?: () => void;
   onReady?: () => void;
   skipIntro?: boolean;
@@ -37,20 +39,20 @@ function HouseFallback() {
         width="72%"
         height="72%"
         fill="none"
-        stroke="#6e1810"
+        stroke="#7E5738"
         strokeWidth="2.2"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <path d="M60 120 L160 70 L260 120 L160 170 Z" fill="#FFF2E5" />
-        <path d="M60 120 L60 190 L160 230 L160 170 Z" fill="#FFE1CE" />
-        <path d="M260 120 L260 190 L160 230 L160 170 Z" fill="#FFD3BC" />
+        <path d="M60 120 L160 70 L260 120 L160 170 Z" fill="#FFFCF7" />
+        <path d="M60 120 L60 190 L160 230 L160 170 Z" fill="#F6DDC2" />
+        <path d="M260 120 L260 190 L160 230 L160 170 Z" fill="#E9C49A" />
         <path d="M96 138 L96 172" opacity="0.5" />
         <path d="M128 154 L128 188" opacity="0.5" />
         <path d="M192 154 L192 188" opacity="0.5" />
         <path d="M224 138 L224 172" opacity="0.5" />
-        <circle cx="160" cy="118" r="7" fill="#E7551A" stroke="none" />
+        <circle cx="160" cy="118" r="7" fill="#F2AE7E" stroke="none" />
       </svg>
     </div>
   );
@@ -61,7 +63,11 @@ export function LandingHero({
   onReady,
   skipIntro = false,
   e2eMode = false,
+  overviewZoom = 4,
+  captureSnapshot = true,
 }: LandingHeroProps) {
+  const captureSnapshotRef = useRef(captureSnapshot);
+  const overviewZoomRef = useRef(overviewZoom);
   const mountRef = useRef<HTMLDivElement>(null);
   const labelRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const sceneHandleRef = useRef<LandingHeroSceneHandle | null>(null);
@@ -133,10 +139,17 @@ export function LandingHero({
 
     let disposed = false;
     let handle: LandingHeroSceneHandle | null = null;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotion = () => {
+      handle?.setPaused(motion.matches);
+      setPaused(motion.matches);
+    };
+    motion.addEventListener("change", syncMotion);
 
     const safeDispose = () => {
       if (disposed) return;
       disposed = true;
+      motion.removeEventListener("change", syncMotion);
       handle?.dispose();
       sceneHandleRef.current = null;
     };
@@ -146,7 +159,9 @@ export function LandingHero({
         if (disposed || leavingRef.current) return;
         handle = createLandingHeroScene({
           mount,
-          skipIntro: skipIntroRef.current,
+          overviewZoom: overviewZoomRef.current,
+          captureSnapshot: captureSnapshotRef.current,
+          skipIntro: skipIntroRef.current || motion.matches,
           testMode: e2eModeRef.current,
           getLabelEl: (ri) => labelRefs.current[ri] ?? null,
           onGlFailed: () => {
@@ -171,6 +186,7 @@ export function LandingHero({
         });
 
         sceneHandleRef.current = handle;
+        syncMotion();
         if (!handle) {
           setRendererState("fallback");
           setGlFailed(true);

@@ -6,6 +6,8 @@ const base = process.env.CORPORATE_PREVIEW_URL || "http://127.0.0.1:3026";
 const out = path.resolve("docs/corporate-refresh/qa");
 const routes = [
   "/",
+  "/services",
+  "/workspace",
   "/residential",
   "/commercial",
   "/space-planning",
@@ -107,6 +109,12 @@ const sizes = [
         });
         assert.equal(response.status(), 200, route);
         await page.locator("[data-corporate-root]").waitFor();
+        if (route === "/")
+          await page
+            .locator(
+              '[data-renderer-state="webgl"], [data-renderer-state="fallback"]',
+            )
+            .waitFor({ timeout: 30000 });
         await page.evaluate(async () => {
           await document.fonts.ready;
           await Promise.all(
@@ -163,9 +171,9 @@ const sizes = [
     );
     await page
       .getByRole("navigation", { name: "Mobile navigation", exact: true })
-      .getByRole("link", { name: "Business" })
+      .getByRole("link", { name: "Services" })
       .click();
-    await page.waitForURL("**/commercial");
+    await page.waitForURL("**/services");
     await page
       .getByRole("link", { name: "Furnishes home", exact: true })
       .click();

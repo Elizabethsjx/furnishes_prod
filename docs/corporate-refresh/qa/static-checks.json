@@ -11,6 +11,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 320,
       "height": 740,
@@ -101,6 +119,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 390,
       "height": 844,
@@ -191,6 +227,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 430,
       "height": 932,
@@ -281,6 +335,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 768,
       "height": 1024,
@@ -371,6 +443,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 1024,
       "height": 768,
@@ -461,6 +551,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 1440,
       "height": 1000,
@@ -551,6 +659,24 @@
       "animations": 0
     },
     {
+      "route": "/services",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
       "route": "/residential",
       "width": 1920,
       "height": 1080,
@@ -633,6 +759,24 @@
     },
     {
       "route": "/",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/services",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/workspace",
       "width": 3840,
       "height": 2160,
       "scrollWidth": 3840,
@@ -726,19 +870,19 @@
     "new-390": {
       "tally": {
         "serif": {
-          "characters": 42,
-          "rectArea": 8564.53125,
-          "nodes": 1
-        },
-        "sans": {
-          "characters": 2626,
-          "rectArea": 435553.34375,
-          "nodes": 122
-        },
-        "mono": {
           "characters": 0,
           "rectArea": 0,
           "nodes": 0
+        },
+        "sans": {
+          "characters": 2684,
+          "rectArea": 479979.5311203003,
+          "nodes": 102
+        },
+        "mono": {
+          "characters": 348,
+          "rectArea": 50465.03125,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
@@ -748,19 +892,19 @@
     "new-768": {
       "tally": {
         "serif": {
-          "characters": 42,
-          "rectArea": 10838.28125,
-          "nodes": 1
-        },
-        "sans": {
-          "characters": 2631,
-          "rectArea": 470148.15625,
-          "nodes": 123
-        },
-        "mono": {
           "characters": 0,
           "rectArea": 0,
           "nodes": 0
+        },
+        "sans": {
+          "characters": 2684,
+          "rectArea": 542556.40625,
+          "nodes": 102
+        },
+        "mono": {
+          "characters": 382,
+          "rectArea": 54074.859375,
+          "nodes": 40
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
@@ -770,19 +914,19 @@
     "new-1440": {
       "tally": {
         "serif": {
-          "characters": 42,
-          "rectArea": 10838.28125,
-          "nodes": 1
-        },
-        "sans": {
-          "characters": 2576,
-          "rectArea": 676482.40625,
-          "nodes": 113
-        },
-        "mono": {
           "characters": 0,
           "rectArea": 0,
           "nodes": 0
+        },
+        "sans": {
+          "characters": 2651,
+          "rectArea": 751755.6708374023,
+          "nodes": 95
+        },
+        "mono": {
+          "characters": 378,
+          "rectArea": 53680.109375,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
@@ -792,19 +936,19 @@
     "new-3840": {
       "tally": {
         "serif": {
-          "characters": 42,
-          "rectArea": 10838.28125,
-          "nodes": 1
-        },
-        "sans": {
-          "characters": 2576,
-          "rectArea": 905518.1875,
-          "nodes": 113
-        },
-        "mono": {
           "characters": 0,
           "rectArea": 0,
           "nodes": 0
+        },
+        "sans": {
+          "characters": 2651,
+          "rectArea": 1026715.265625,
+          "nodes": 95
+        },
+        "mono": {
+          "characters": 378,
+          "rectArea": 53680.109375,
+          "nodes": 39
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",

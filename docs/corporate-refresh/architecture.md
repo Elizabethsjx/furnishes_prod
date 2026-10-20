@@ -106,3 +106,8 @@ SNAPOD 资料只作为待确认的静音舱线索，不断言华桂拥有该品�
 ## 验证与交付
 
 详见 `typography.md`、`motion-and-qa.md` 与 `qa/static-checks.json`。本轮动画做源代码检查与 reduced-motion 静态检查，不对运动中的帧率作测试结论。本地验证不等于 iOS Safari 实机认证。未发布或推送远端。
+
+
+## 当前版本索引 · 2026-10-20
+
+本页前文是此前企业首页结构。当前版本以原版Three.js小屋为基础，最新路由、首页outline和思维导图请见 [spatial-refresh-plan.md](spatial-refresh-plan.md)。新增/services和/workspace，当前主导航为服务、案例、家具与供应商、3D工作空间。

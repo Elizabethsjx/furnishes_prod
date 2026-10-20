@@ -13,15 +13,24 @@ export default function OpenGraphImage() {
         flexDirection: "column",
         justifyContent: "center",
         padding: 80,
-        background: "#fff2e5",
-        color: "#6b2c12",
+        background: "#FAF0E3",
+        color: "#3B2A1A",
         fontSize: 72,
         fontWeight: 600,
       }}
     >
-      <div>furnishes.</div>
-      <div style={{ fontSize: 32, marginTop: 24, fontWeight: 400 }}>
-        Interior design studio for modern living
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          borderLeft: "6px solid #F2AE7E",
+          paddingLeft: 36,
+        }}
+      >
+        <div>furnishes.</div>
+        <div style={{ fontSize: 32, marginTop: 24, fontWeight: 400 }}>
+          Space design, furniture and 3D.
+        </div>
       </div>
     </div>,
     size,

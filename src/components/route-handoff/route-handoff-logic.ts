@@ -1,9 +1,9 @@
 /** Corporate homepage paper. */
-export const LANDING_HANDOFF_BG = "#fff2e5";
+export const LANDING_HANDOFF_BG = "#faf6f0";
 /** Quiz document paint. */
 export const QUIZ_HANDOFF_BG = "#1a1714";
 /** Account / auth / legal paper. */
-export const PEACH_HANDOFF_BG = "#fff2e5";
+export const PEACH_HANDOFF_BG = "#faf6f0";
 /** Canvas playground cream. */
 export const CANVAS_HANDOFF_BG = "#fff4e3";
 /** Shared conversation page. */
@@ -35,6 +35,8 @@ function routeSurface(pathname: string): RouteSurface {
 }
 
 const CORPORATE_PATHS = new Set([
+  "/services",
+  "/workspace",
   "/residential",
   "/commercial",
   "/space-planning",

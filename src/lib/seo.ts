@@ -160,6 +160,8 @@ export function buildSitemap(
     { path: "/commercial", changeFrequency: "monthly", priority: 0.8 },
     { path: "/space-planning", changeFrequency: "monthly", priority: 0.8 },
     { path: "/how-it-works", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/services", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/workspace", changeFrequency: "monthly", priority: 0.7 },
     { path: "/collections", changeFrequency: "monthly", priority: 0.8 },
     { path: "/projects", changeFrequency: "monthly", priority: 0.8 },
     { path: "/partners/huagui", changeFrequency: "monthly", priority: 0.8 },

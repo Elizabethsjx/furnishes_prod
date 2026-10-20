@@ -4,7 +4,6 @@ import { Archivo, Space_Mono } from "next/font/google";
 import { RouteHandoff } from "@/components/route-handoff/RouteHandoff";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { ClerkSessionBridge } from "@/features/auth/ClerkSessionBridge";
-import { LandingFreezeBoot } from "@/features/landing/LandingFreezeBoot";
 import { resolvedPublicOrigin } from "@/server/app-origin";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, siteRobots } from "@/lib/seo";
 import "./globals.css";
@@ -57,7 +56,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivo.variable} ${spaceMono.variable}`}>
       <body>
-        <LandingFreezeBoot />
         <SiteJsonLd />
         {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ? (
           <ClerkProvider

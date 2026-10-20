@@ -40,14 +40,14 @@ export const workflow = [
     output: "A shortlist with specifications and reference quotes",
   },
   {
-    title: "See it in your space",
-    text: "Explore a 3D planning proposal with furniture placed in context.",
-    output: "A visual layout for discussion",
+    title: "Turn the floor plan into 3D",
+    text: "Build a spatial planning model from your floor plan, checking room proportions and circulation.",
+    output: "A three-dimensional space to review",
   },
   {
-    title: "Refine your project",
-    text: "Adjust the selection and layout, then confirm the scope and next steps.",
-    output: "A refined selection and project quotation",
+    title: "Bring furniture into your space",
+    text: "Place selected furniture in the model, explore the layout and refine the spatial design together.",
+    output: "A furnished visual proposal and agreed next steps",
   },
 ];
 
