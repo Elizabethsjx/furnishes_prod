@@ -1,0 +1,839 @@
+{
+  "mode": "static; prefers-reduced-motion: reduce; screenshots disable animations",
+  "checks": [
+    {
+      "route": "/",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/residential",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/commercial",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/space-planning",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/how-it-works",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/collections",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/projects/bto-family",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/partners/huagui",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 3840,
+      "height": 2160,
+      "scrollWidth": 3840,
+      "h1": 1,
+      "brokenImages": [],
+      "animations": 0
+    }
+  ],
+  "fonts": {
+    "new-390": {
+      "tally": {
+        "serif": {
+          "characters": 381,
+          "rectArea": 170981.890625,
+          "nodes": 21
+        },
+        "sans": {
+          "characters": 1684,
+          "rectArea": 195474.453125,
+          "nodes": 81
+        },
+        "mono": {
+          "characters": 0,
+          "rectArea": 0,
+          "nodes": 0
+        }
+      },
+      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "fontsLoaded": "loaded"
+    },
+    "new-768": {
+      "tally": {
+        "serif": {
+          "characters": 381,
+          "rectArea": 200407.140625,
+          "nodes": 21
+        },
+        "sans": {
+          "characters": 1689,
+          "rectArea": 204610.28125,
+          "nodes": 82
+        },
+        "mono": {
+          "characters": 0,
+          "rectArea": 0,
+          "nodes": 0
+        }
+      },
+      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "fontsLoaded": "loaded"
+    },
+    "new-1440": {
+      "tally": {
+        "serif": {
+          "characters": 381,
+          "rectArea": 388664.640625,
+          "nodes": 21
+        },
+        "sans": {
+          "characters": 1634,
+          "rectArea": 197182.71875,
+          "nodes": 72
+        },
+        "mono": {
+          "characters": 0,
+          "rectArea": 0,
+          "nodes": 0
+        }
+      },
+      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "fontsLoaded": "loaded"
+    },
+    "new-3840": {
+      "tally": {
+        "serif": {
+          "characters": 381,
+          "rectArea": 562207.90625,
+          "nodes": 21
+        },
+        "sans": {
+          "characters": 1634,
+          "rectArea": 231562.453125,
+          "nodes": 72
+        },
+        "mono": {
+          "characters": 0,
+          "rectArea": 0,
+          "nodes": 0
+        }
+      },
+      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "fontsLoaded": "loaded"
+    },
+    "original-1440": {
+      "tally": {
+        "serif": {
+          "characters": 613,
+          "rectArea": 750141.515625,
+          "nodes": 40
+        },
+        "sans": {
+          "characters": 4022,
+          "rectArea": 377327.953125,
+          "nodes": 167
+        },
+        "mono": {
+          "characters": 0,
+          "rectArea": 0,
+          "nodes": 0
+        }
+      },
+      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "fontsLoaded": "loaded"
+    }
+  },
+  "errors": [],
+  "interactions": "mobile keyboard menu, branch navigation, return home, query prefill, form validation, legacy redirects passed; no email sent"
+}

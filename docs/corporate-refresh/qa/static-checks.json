@@ -726,14 +726,14 @@
     "new-390": {
       "tally": {
         "serif": {
-          "characters": 381,
-          "rectArea": 170981.890625,
-          "nodes": 21
+          "characters": 42,
+          "rectArea": 8564.53125,
+          "nodes": 1
         },
         "sans": {
-          "characters": 1684,
-          "rectArea": 195474.453125,
-          "nodes": 81
+          "characters": 2626,
+          "rectArea": 435553.34375,
+          "nodes": 122
         },
         "mono": {
           "characters": 0,
@@ -742,20 +742,20 @@
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
-      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "headingFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
       "fontsLoaded": "loaded"
     },
     "new-768": {
       "tally": {
         "serif": {
-          "characters": 381,
-          "rectArea": 200407.140625,
-          "nodes": 21
+          "characters": 42,
+          "rectArea": 10838.28125,
+          "nodes": 1
         },
         "sans": {
-          "characters": 1689,
-          "rectArea": 204610.28125,
-          "nodes": 82
+          "characters": 2631,
+          "rectArea": 470148.15625,
+          "nodes": 123
         },
         "mono": {
           "characters": 0,
@@ -764,20 +764,20 @@
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
-      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "headingFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
       "fontsLoaded": "loaded"
     },
     "new-1440": {
       "tally": {
         "serif": {
-          "characters": 381,
-          "rectArea": 388664.640625,
-          "nodes": 21
+          "characters": 42,
+          "rectArea": 10838.28125,
+          "nodes": 1
         },
         "sans": {
-          "characters": 1634,
-          "rectArea": 197182.71875,
-          "nodes": 72
+          "characters": 2576,
+          "rectArea": 676482.40625,
+          "nodes": 113
         },
         "mono": {
           "characters": 0,
@@ -786,20 +786,20 @@
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
-      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "headingFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
       "fontsLoaded": "loaded"
     },
     "new-3840": {
       "tally": {
         "serif": {
-          "characters": 381,
-          "rectArea": 562207.90625,
-          "nodes": 21
+          "characters": 42,
+          "rectArea": 10838.28125,
+          "nodes": 1
         },
         "sans": {
-          "characters": 1634,
-          "rectArea": 231562.453125,
-          "nodes": 72
+          "characters": 2576,
+          "rectArea": 905518.1875,
+          "nodes": 113
         },
         "mono": {
           "characters": 0,
@@ -808,29 +808,7 @@
         }
       },
       "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
-      "headingFont": "Georgia, \"Times New Roman\", serif",
-      "fontsLoaded": "loaded"
-    },
-    "original-1440": {
-      "tally": {
-        "serif": {
-          "characters": 613,
-          "rectArea": 750141.515625,
-          "nodes": 40
-        },
-        "sans": {
-          "characters": 4022,
-          "rectArea": 377327.953125,
-          "nodes": 167
-        },
-        "mono": {
-          "characters": 0,
-          "rectArea": 0,
-          "nodes": 0
-        }
-      },
-      "bodyFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
-      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "headingFont": "Archivo, \"Archivo Fallback\", Arial, sans-serif",
       "fontsLoaded": "loaded"
     }
   },

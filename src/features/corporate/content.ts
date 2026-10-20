@@ -3,7 +3,7 @@ export const businessAreas = [
     href: "/residential",
     number: "01",
     name: "For your home",
-    title: "Everyday life, considered.",
+    title: "Residential furniture.",
     description:
       "Furniture sourcing for family homes, personal routines and the space you have.",
     kind: "home",
@@ -12,7 +12,7 @@ export const businessAreas = [
     href: "/commercial",
     number: "02",
     name: "For your business",
-    title: "Space for people to work.",
+    title: "Commercial furniture.",
     description:
       "Furniture selections for workplaces, reception areas and shared spaces.",
     kind: "work",
@@ -21,7 +21,7 @@ export const businessAreas = [
     href: "/space-planning",
     number: "03",
     name: "Plan your space",
-    title: "See the possibilities first.",
+    title: "3D spatial planning.",
     description:
       "Bring a floor plan and a shortlist together in a visual spatial proposal.",
     kind: "plan",

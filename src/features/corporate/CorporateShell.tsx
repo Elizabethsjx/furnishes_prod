@@ -3,8 +3,8 @@ import { ResetLanding } from "./ResetLanding";
 import s from "./corporate.module.css";
 
 const navigation = [
-  ["/residential", "Homes"],
   ["/commercial", "Business"],
+  ["/residential", "Homes"],
   ["/space-planning", "Space planning"],
   ["/collections", "Collections"],
   ["/projects", "Our work"],
@@ -50,7 +50,7 @@ export function CorporateShell({
             {userLabel ? "Workspace" : "Log in"}
           </a>
           <a className={s.smallButton} href="/contact">
-            Start a project ↗
+            Get a project quote ↗
           </a>
         </div>
         <details className={s.mobileNav}>
@@ -102,15 +102,18 @@ export function CorporateShell({
 export function ProjectCTA() {
   return (
     <section className={s.cta}>
-      <p className={s.eyebrow}>LET’S START WITH YOUR SPACE</p>
+      <p className={s.eyebrow}>YOUR NEXT PROJECT STARTS HERE</p>
       <h2>
-        A clear brief.
+        Your brief. Our next step.
         <br />
-        <em>A considered beginning.</em>
+        <em>Let’s build your furniture plan.</em>
       </h2>
-      <p>Bring a floor plan, a wish list, or simply an idea.</p>
+      <p>
+        Share your requirements, budget and floor plan. Start with a furniture
+        shortlist and a clear project scope.
+      </p>
       <a className={s.button} href="/contact">
-        Discuss your project ↗
+        Request a project consultation ↗
       </a>
     </section>
   );

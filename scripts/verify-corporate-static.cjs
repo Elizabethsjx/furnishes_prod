@@ -107,7 +107,15 @@ const sizes = [
         });
         assert.equal(response.status(), 200, route);
         await page.locator("[data-corporate-root]").waitFor();
-        await page.evaluate(() => document.fonts.ready);
+        await page.evaluate(async () => {
+          await document.fonts.ready;
+          await Promise.all(
+            [...document.images].map(async (image) => {
+              image.loading = "eager";
+              await image.decode();
+            }),
+          );
+        });
         const state = await page.evaluate(() => ({
           width: innerWidth,
           scrollWidth: document.documentElement.scrollWidth,
