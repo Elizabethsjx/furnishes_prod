@@ -1,5 +1,5 @@
 /** Corporate homepage paper. */
-export const LANDING_HANDOFF_BG = "#f4f0e7";
+export const LANDING_HANDOFF_BG = "#fff2e5";
 /** Quiz document paint. */
 export const QUIZ_HANDOFF_BG = "#1a1714";
 /** Account / auth / legal paper. */

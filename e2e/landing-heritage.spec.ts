@@ -7,7 +7,7 @@ test("corporate home explains the process and exposes business branches", async 
 }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Considered furniture.",
+    "Furniture selected.",
   );
   await expect(page.locator("canvas")).toHaveCount(0);
   await expect(page.locator("#how-it-works li")).toHaveCount(4);
