@@ -15,3 +15,10 @@ Playground在/account/canvas，登录保护。AI是/api/chat的Anthropic接口�
 工具：Node /Users/shenjunxi/.nvm/versions/node/v24.13.0/bin/node；Git /Applications/GitHub Desktop.app/Contents/Resources/app/git/bin/git；Chrome /Applications/Google Chrome.app/Contents/MacOS/Google Chrome。系统git/xcrun不可用。当前目录可能不存在，exec显式设置上述仓库路径或/tmp，shell=/bin/bash,login=false。修改Developer仓库需要环境授权。使用用户现有localhost:3000服务前先确认对应cwd；不要终止用户进程。验收可运行 scripts/corporate-playwright.config.ts 与 scripts/verify-corporate-static.cjs，CORPORATE_PREVIEW_URL=http://localhost:3000。不要把旧QA截图当当前结果。
 
 继续完成剩余验证，检查首页静态截图在iPhone/iPad/desktop/4K的布局，保留减少动态效果、键盘操作、WebGL降级。最后简明汇报完成项、真实限制及可打开的预览/文档。用户希望usage不足时可直接用本prompt交接。
+
+
+## 最终收尾补充（2026-10-20）
+
+最终生产构建通过，9项浏览器回归及2项最终补查通过，96项静态检查通过。源码在79af387提交中已包含暂停后缩放重绘及手机标签边缘修复。本次补充了最终截图及验证文档；先查看git status，不要回滚用户提交。独立构建目录曾有旧实验源码与.next/dev路由缓存，现已清理并通过；不要把旧缓存报错当当前源码错误。
+
+接下来主要依赖是真实MAX导出为GLB，以及真实账户环境下的AI/项目保存验证。不是重做主页。动画目前按用户要求进行静态及状态检查，尚未做实机Safari或动画逐帧验收。

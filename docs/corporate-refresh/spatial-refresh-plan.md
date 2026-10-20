@@ -79,7 +79,7 @@ Playground AI 使用 /api/chat，依赖 ANTHROPIC_API_KEY 与 ENABLE_BRAIN_PIPEL
 
 ## 部署
 
-尚未推送，未修改线上部署绑定。仓库内没有证据确认 furnish-es.com 的生产分支；发布前需在实际部署项目中核对。不能仅凭fork关系保证推送不会触发部署。
+本次收尾未推送、未修改线上部署绑定。继续时已有79af387提交；当前部署状态不能仅凭Git提交推断。仓库内没有证据确认 furnish-es.com 的生产分支；发布前需在实际部署项目中核对。不能仅凭fork关系保证推送不会触发部署。
 
 ## 验证
 
