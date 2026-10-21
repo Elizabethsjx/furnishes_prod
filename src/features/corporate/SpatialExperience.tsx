@@ -44,7 +44,12 @@ export function SpatialExperience() {
   return (
     <>
       <div className={s.world}>
-        <LandingHero skipIntro overviewZoom={2.8} captureSnapshot={false} />
+        <LandingHero
+          skipIntro
+          overviewZoom={2.2}
+          overviewShiftX={0.14}
+          captureSnapshot={false}
+        />
         <p className={s.worldLabel}>A SPACE FOR PEOPLE · INTERACTIVE CONCEPT</p>
       </div>
       {intro && (
